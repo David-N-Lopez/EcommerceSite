@@ -58,17 +58,7 @@ module.exports = function (grunt) {
 			pages: {
 				src: ['<%= config.src %>/templates/pages/*.hbs'],
 				dest: '<%= config.build %>/'
-			},
-
-            javascript : {
-                src: ['<%= config.src %>/templates/pages/javascript/*.hbs'],
-                dest: '<%= config.build %>/javascript/'
-            },
-
-            prototypes : {
-                src: ['<%= config.src %>/templates/pages/prototypes/*.hbs'],
-                dest: '<%= config.build %>/prototypes/'
-            }
+			}
 		},
 
 		// Before generating any new files,
@@ -102,12 +92,7 @@ module.exports = function (grunt) {
 			},
 			build: {
 				src: [
-					'<%= config.src %>/js/vendor/jquery-1.9.min.js',
-					'<%= config.src %>/js/vendor/jquery.hoverIntent.min.js',
-					'<%= config.src %>/js/vendor/respond.to.min.js',
-					'<%= config.src %>/js/gorilla/utilities.js',
-					'<%= config.src %>/js/experimental/*.js',
-					'<%= config.src %>/js/gorilla/*.js'
+					'<%= config.src %>/js/vendor/jquery-1.9.min.js'
 				],
 				dest: '<%= config.build %>/js/plugins.js'
 			}
