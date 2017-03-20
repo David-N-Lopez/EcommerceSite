@@ -1,0 +1,32 @@
+<aside class="gor-mobile-accordion">
+    <h3 class="accordion-header visible-md">Pages</h3>
+    <div class="accordion-content">
+        <div class="accordion-content-inner">
+            <ul>
+                {{#if uiKitNavigation}}
+                    {{#each site.top-links.[0].children}}
+                        <li>
+                            <a class="scrollable" href="{{this.url}}">{{this.title}}</a>
+                        </li>
+                    {{/each}}
+                {{/if}}
+
+                {{#if jsNavigation}}
+                    {{#each site.top-links.[1].children}}
+                        <li>
+                            <a href="{{this.url}}">{{this.title}}</a>
+                        </li>
+                    {{/each}}
+                {{/if}}
+
+                {{#if prototypeNavigation}}
+                    {{#each site.top-links.[3].children}}
+                        <li>
+                            <a href="{{this.url}}">{{this.title}}</a>
+                        </li>
+                    {{/each}}
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</aside>
