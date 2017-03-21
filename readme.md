@@ -1,6 +1,6 @@
 # Gorilla Interview Excercise
 
-## The PLP
+## The PLP (Product Listing Page)
 
 You have been provided a PSD file (plp.psd) showing a sample product listing page.  You will create a static implementation of this design.  Sample data to populate the page content is provided in site.json.
 
