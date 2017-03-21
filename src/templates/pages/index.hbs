@@ -3,6 +3,10 @@ title: Home
 layout: src/templates/layouts/2column-left.hbs
 ---
 
-{{#each page.facets}}
-    {{this.category}}
+
+
+{{#each site.facets}}
+    <li>
+        {{this.category}}
+    </li>
 {{/each}}

@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 				flatten: true,
 				assets: '<%= config.build %>/assets',
 				javascript: '/js',
-				data: '<%= config.src %>/data/**/*.{json,yml}',
+				data: '<%= config.src %>/data/*.{json,yml}',
 				helpers: '<%= config.src %>/templates/helpers/**/*.js',
 				layout: '<%= config.src %>/templates/layouts/1column.hbs',
 				partials: '<%= config.src %>/templates/partials/**/*.hbs',

@@ -1,6 +1,6 @@
 {
-
-    "facets" : [{
+    "facets" : [
+        {
         "category" : "Attribute Category",
         "filters" : [{
             "name" : "Attribute 1",
