@@ -1,39 +1,15 @@
 ---
 component: header
 ---
-<div class="banner">
-    <div class="container-fluid">
-        <p>{{site.title}}</p>
-    </div>
-</div>
+
 <header id="masthead" class="masthead" role="banner">
     <div class="container-fluid">
-        <button id="hamburger" type="button" class="hamburger visible-md" data-tray="open" data-target="#navigation"><i class="icon-nav"></i></button>
         <h1 class="logo">
 	        <a href="/">
                 <img src="{{assets}}/images/logo.gif" alt="{{site.title}}" />
             </a>
         </h1>
-	    <nav id="navigation" class="navigation gor-nav" role="navigation">
-            <button type="button" class="btn-close visible-md" data-tray="close" data-target="#navigation"><i class="icon-close"></i></button>
-            <ul>
-            {{#each site.top-links}}
-                <li class="trigger{{#if this.isCurrentPage}} active{{/if}}">
-                    <a {{#if this.children}}class="parent"{{/if}} href="{{this.url}}">{{this.title}}</a>
-                    {{#if this.children}}
-                        <div class="drop-down">
-                            <ul>
-                                {{#each this.children}}
-                                <li class="{{#if this.isCurrentPage}}active{{/if}}">
-                                    <a href="{{this.url}}">{{this.title}}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
-                        </div>
-                    {{/if}}
-                </li>
-            {{/each}}
-		    </ul>
+	    <nav role="navigation">
 	    </nav>
     </div>
 </header>

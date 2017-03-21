@@ -317,7 +317,6 @@ module.exports = function (grunt) {
 
 		// compile less > css
 		'less:build',
-        'less:examples',
         'postcss',
 
 		// build js

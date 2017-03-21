@@ -1,8 +1,8 @@
-# Gorilla UI Kit
+# Gorilla Interview Excercise
 
 ## Pre Conditions
 
-In Order to instantiate the Gorilla UI Kit, we need to make sure our local machine has Node.js and Grunt.js as dependencies.
+In Order to instantiate the Gorilla Interview Excercise, we need to make sure our local machine has Node.js and Grunt.js as dependencies.
 If you don't have those, you can use a command line in linux/Mac OS to install them, or download Node from their website and its package manager (npm).
 
 Before you try to install node, please verify whether you have it installed yet by executing the following test command:
@@ -30,23 +30,14 @@ $ sudo npm install grunt-cli -g
 
 ## Installation
 
-First of all we need to use the npm to download all dependencies specified in `package.json`.  To do that please execute the command on the root directory.
-
-### Gorilla FED Guis
-
-In order to get your dependencies in sync, provisionally you need to modify `package.json` file on line 26 with your stash username to:
-
-```json
-    "gorilla-fed-guis": "git+https://aromero@stash.gorillagroup.com/scm/ft/gorilla-fed-guis.git",
-```
-
+First of all we need to use the npm to download all dependencies specified in `package.json`.  To do that please execute the command on the project root directory.
 ```sh
-$ npm install
+$ sudo npm install
 ```
 
 ## Run the Node Server
 
-The Gorilla UI Kit is built on the top of the assemble architecture.  Assemble provides with a grunt shortcut to initiate our node server on port 8094.  Please view `Gruntfile.js` on line 23 if you wish to change that port.
+The Gorilla Interview Excercise is built on the top of the assemble architecture.  Assemble provides with a grunt shortcut to initiate our node server on port 8094.  Please view `Gruntfile.js` on line 23 if you wish to change that port.
 The grunt task to run the server is `server`, so you only need to execute the command:
 
 ```sh
@@ -60,13 +51,41 @@ Please do not include the /build and the /node_modules folders to the GIT reposi
 
 ## Folder structure
 
-todo
-
-## site.json
-
-We use `site.json` file as a sitemap to enlist all links available for the UI Kit website grouped in 4 different kind of links:
-
-- `top-links`. Currently used at the top of the navigation in all pages.  Javascript (Gorilla JS Plugins), Utilities (utilities.js) and Prototypes.
-- `documentation-links`. Used in the homepage to describe each section of the UI/UX boilerplate.
-- `gorilla-js-links`. All the links to the Gorilla JS Plugins documentation pages.
-- `3rd-party-js-links`. All the links to the current prototypes examples we show as references.
+```
+|--- src /
+     |--- assets /
+          |--- images /
+          |--- less /
+               |--- vendors /
+                    |--- normalize.less
+               |--- styles.less
+     |--- data /
+          |--- page.json
+     |--- js /
+          |--- vendor /
+               |--- jquery-1.9.min.js
+          |--- main.js     
+     |--- templates /
+          |--- helpers /
+               |--- helpers.js
+          |--- layouts /
+               |--- 1column-full.hbs
+               |--- 1column.hbs
+               |--- 2column-left.hbs
+               |--- 2column-right.hbs
+               |--- 3columns.hbs
+          |--- pages /
+               |--- index.hbs
+          |--- partials /
+               |--- footer.hbs
+               |--- head.hbs
+               |--- header.hbs
+               |--- left.hbs
+               |--- right.hbs
+               |--- scripts.hbs
+     |--- .gitignore
+     |--- Gruntfile.js
+     |--- package.json
+     |--- plp.psd
+     |--- readme.md
+```
