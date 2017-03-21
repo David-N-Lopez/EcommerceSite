@@ -1,5 +1,54 @@
 # Gorilla Interview Excercise
 
+## The PLP
+
+You have been provided a PSD file (plp.psd) showing a sample product listing page.  You will create a static implementation of this design.  Sample data to populate the page content is provided in site.json.
+
+The project has been configured to use Assemble as a static site generator.  It is suggested that you use a JavaScript templating engine such as Mustache, Jade, or Handlebars.  There are base files in the project that should give you some indication as the direction you should take to complete the task.
+
+*For this exercise you do not need to implement the site header or footer.  You can start at the page breadcrumbs and work your way down to include the main content and sidebar.*
+
+## Folder structure
+
+```
+|--- src /
+     |--- assets /
+          |--- images /
+          |--- less /
+               |--- vendors /
+                    |--- normalize.less
+               |--- styles.less
+     |--- data /
+          |--- site.json
+     |--- js /
+          |--- vendor /
+               |--- jquery-1.9.min.js
+          |--- main.js     
+     |--- templates /
+          |--- helpers /
+               |--- helpers.js
+          |--- layouts /
+               |--- 1column-full.hbs
+               |--- 1column.hbs
+               |--- 2column-left.hbs
+               |--- 2column-right.hbs
+               |--- 3columns.hbs
+          |--- pages /
+               |--- index.hbs
+          |--- partials /
+               |--- footer.hbs
+               |--- head.hbs
+               |--- header.hbs
+               |--- left.hbs
+               |--- right.hbs
+               |--- scripts.hbs
+     |--- .gitignore
+     |--- Gruntfile.js
+     |--- package.json
+     |--- plp.psd
+     |--- readme.md
+```
+
 ## Pre Conditions
 
 In Order to instantiate the Gorilla Interview Excercise, we need to make sure our local machine has Node.js and Grunt.js as dependencies.
@@ -45,47 +94,13 @@ $ grunt server
 ```
 And voilà...
 
+## CSS Preprocessor
+
+`Gruntfile.js` has been configured to compile LESS into CSS.  A Grunt watch task is executed when running the Node Server with the above mentioned command.  If you wish to use a different CSS preprocessor you may edit the `Gruntfile.js` and `package.json` and install the required Grunt dependancies.
+
 ## Git
 
 Please do not include the /build and the /node_modules folders to the GIT repository, those are already included in the `.gitignore` file to avoid flooding the repository with generated code.
 
-## Folder structure
 
-```
-|--- src /
-     |--- assets /
-          |--- images /
-          |--- less /
-               |--- vendors /
-                    |--- normalize.less
-               |--- styles.less
-     |--- data /
-          |--- page.json
-     |--- js /
-          |--- vendor /
-               |--- jquery-1.9.min.js
-          |--- main.js     
-     |--- templates /
-          |--- helpers /
-               |--- helpers.js
-          |--- layouts /
-               |--- 1column-full.hbs
-               |--- 1column.hbs
-               |--- 2column-left.hbs
-               |--- 2column-right.hbs
-               |--- 3columns.hbs
-          |--- pages /
-               |--- index.hbs
-          |--- partials /
-               |--- footer.hbs
-               |--- head.hbs
-               |--- header.hbs
-               |--- left.hbs
-               |--- right.hbs
-               |--- scripts.hbs
-     |--- .gitignore
-     |--- Gruntfile.js
-     |--- package.json
-     |--- plp.psd
-     |--- readme.md
-```
+
