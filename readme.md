@@ -8,6 +8,9 @@ The project has been configured to use Assemble as a static site generator.  It 
 
 *For this exercise you do not need to implement the site header or footer.  You can start at the page breadcrumbs and work your way down to include the main content and sidebar.*
 
+### Additional JavaScript Interactions/Simulations
+A secondary goal of this exercise should include pieces of interactions you would typically find in a product listing page such as sorting of products, filtering of products, etc.
+
 ## Folder structure
 
 ```
