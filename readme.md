@@ -65,9 +65,8 @@ $ node -v
 
 The version should be higher than v0.10.32.
 
-__For Windows Users__ Please follow the instructions described [here](http://blog.teamtreehouse.com/install-node-js-npm-windows).
-
-__For MacOS Users__ Please follow the instructions described [here](http://coolestguidesontheplanet.com/installing-node-js-on-osx-10-10-yosemite/)
+__For Windows Users & MacOS Users__ 
+Download latest stable version from https://nodejs.org/en/.
 
 __For Linux Users__ Please execute the following command on your terminal window:
 
