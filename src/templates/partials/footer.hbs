@@ -1,13 +1,93 @@
----
-component: footer
----
+--- component: footer ---
 <footer id="footer" class="footer" role="contentinfo">
-    <div class="container-fluid">
-        <p class="copyright">
-            {{site.copyright}}
+    <div class="container">
+        <div class="row">
+        <div class="col-md-3 mt-3">
+            <ul>
+                <li class="footer-title">
+                    <strong>About Us</strong>
+                </li>
+                <div class="list elements"></div>
+                <li>
+                    Our Story
+                </li>
+                <li>
+                    Offers
+                </li>
+                <li>
+                    Blog
+                </li>
+            </ul>
+        </div>
+    
+
+    <div class="col-md-3 mt-3">
+        <ul>
+            <li class="footer-title">
+                <strong>Help</strong>
+            </li>
+            <div class="list elements"></div>
+            <li>
+                Contact Us
+            </li>
+            <li>
+                Shipping Info
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Sitemap
+            </li>
+    
+    </ul>
+    </div>
+    <div class="col-md-3 mt-3">
+        <ul>
+            <li class="footer-title">
+                <strong>Connect</strong>
+            </li>
+            <li>
+                <p>Social Media Icons</p>
+                <span aria-hidden="true" class="icon-twitter"></span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col-md-3 mt-3">
+        <ul>
+            <li class="footer-title">
+                <strong>Newsletter Sign Up</strong>
+            </li>
+            <div class="list elements"></div>
+            <li>
+                <div class="input-group mt-2">
+                    <input type="text" class="form-control newsletter" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter Email">
+                </div>
+            </li>
+            <li>
+                <button type="button" class="btn sign-up mt-2">Sign Up</button>
+            </li>
+            </ul>
+    </div>
+    </div>
+    </div>
+    <hr id="hr-footer">
+    <div class="container">
+        <div class="row">
+        <p class="copyright col-md-4 pt-2 justify-content-start ">
+            <small>Copyright &copy; 2015 Gorilla</small>
         </p>
-        <address>
-            {{site.address}}
+        <address class="col-md-4 pt-2 justify-content-center align-right">
+            <small>Gorilla | 111 W. Jackson, Suite 300 | Chicago, IL 60604 </small>
         </address>
+        <p class="col-md-4 pt-2 justify-content-end align-right">
+            <small> Back to Top &#x25B2; </small>
+        </p>
+    </div>
     </div>
 </footer>
+
+
+
+

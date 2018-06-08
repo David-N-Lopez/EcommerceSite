@@ -1,15 +1,75 @@
----
-component: header
----
+--- component: header ---
 
-<header id="masthead" class="masthead" role="banner">
-    <div class="container-fluid">
-        <h1 class="logo">
-	        <a href="/">
-                <img src="{{assets}}/images/logo.gif" alt="{{site.title}}" />
-            </a>
-        </h1>
-	    <nav role="navigation">
-	    </nav>
+<header id="masthead" class="masthead">
+    <div class="masthead-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div id="greeting" class="pt-2">
+                    <label>Welcome, John Doe!</label>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle pt-2 ml-3" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        John Doe
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu">
+                        <button class="dropdown-item" type="button">My Account</button>
+                        <button class="dropdown-item" type="button">My Wishlist</button>
+                        <button class="dropdown-item" type="button">Sign Out</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="masthead_bottom container">
+        <nav class=" navbar sticky-top navbar-expand-lg navbar-light container-fluid row" style="background-color: white">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3 container">
+                        <a class="navbar-brandx" href="/">
+                            <img src="{{assets}}/images/logo.gif" alt="{{site.title}}" class="brand" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse col-md-9 container" id="navbarSupportedContent">
+                        <ul class="navbar-nav full-container ml-4 row">
+                            <li class="col-md-3 nav-item mt-1 mr-2">
+                                <a class="nav-link" href="#Browse">Browse</a>
+                            </li>
+                            <li class="col-md-3 nav-item mt-1 mr-2">
+                                <a class="nav-link" href="#About">About</a>
+                            </li>
+                            <li class="col-md-3 nav-item mt-1 mr-2">
+                                <a class="nav-link" href="#Contact us">Contact us</a>
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="input-group col-md-9 mt-2">
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Search">
+                        <div class="input-group-prepend">
+                            <input type="image" class="input-group-image" id="inputGroup-sizing-default" src="{{assets}}/images/search-grey-512.png"
+                            />
+                        </div>
+                    </div>
+                    <a class="col-3 mt-3 pt-1" href="#wish">
+                        <img class="small-icon" src="{{assets}}/images/shopping_cart.png" />
+                    </a>
+                </div>
+            </div>
+    </div>
+    </nav>
+    </div>
     </div>
 </header>
