@@ -1,6 +1,8 @@
 
 @import "variable.less";
 @import "fonts.less";
+
+/***********HEADER*********/
 .masthead-top{
     background-color: @black;
     position: relative;
@@ -14,6 +16,9 @@
     font-weight: 200;
     font-size:13px;
     border:none;
+}
+.navbar{
+    margin-bottom: 2rem;
 }
 .dropdown{
     z-index: 2000;
@@ -138,8 +143,13 @@ ul{
 .icon-youtube,
 .icon-facebook{
     @media (max-width:544px){//how can I store this as functions maybe
-        margin:5px;
-        
+        margin:5px;     
+    }
+}
+.phone-center{
+    @media (max-width:544px){//how can I store this as functions maybe
+        text-align: center;  
+        margin-right: 10%; 
     }
 }
 
@@ -173,3 +183,118 @@ ul{
 .center{
     text-align: center;
 }
+
+//BODY
+.carousel-image{
+    
+}
+.carousel-inner{
+    max-height: 700px;
+}
+.carousel-captions{
+    top:10%;
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.display-4{
+    font-weight: bold;
+}
+.highlight{
+    color:@brand-primary;
+}
+.inline-img{
+    max-width: 38px;
+}
+.carousel-indicators .active{
+    background-color: @brand-primary;
+}
+#carouselExampleIndicators{
+    margin-bottom: 4rem;
+}
+.white{
+    color:white;
+}
+.grid-img{
+    width:100%;
+    height:250px;
+}
+#overlay-gray{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    background: rgba(35,31,32,0.4);
+}
+
+.grid-info{
+    position: relative;
+}
+.overlay-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 35px;
+}
+.line{
+    max-width: 70px;
+}
+.display-5{
+    font-weight: bold;
+    font-size: 30px;
+}
+//CARDS
+.card-columns {
+      column-count: 5;
+}
+.card-columns-phone{
+    column-count:2;
+}
+.card-img-top{
+    width:100%;
+    height: 200px;    
+}
+.card-btn{
+    color:white;
+    background-color: @brand-primary
+}
+.icon-compare{
+    font-size: 22px;
+}
+.overlay-gray-hero{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    background: rgba(35,31,32,0.4);
+}
+// .cards-desktop{
+//     @media (max-width:544px) {
+//         display: none!important;
+//     }
+    
+// }
+// .carousel-phone{
+//     @media (min-width:544px) {
+//         display: none!important;
+//     }
+       
+// }
+.cards-desktop{
+    display: none;
+}
+.carousel-phone{
+    display: none;
+}
+
+
