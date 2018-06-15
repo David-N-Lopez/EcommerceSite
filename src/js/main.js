@@ -69,6 +69,16 @@ $(document).ready(function(){
             $(".phone-comment > span").text("Please enter a correct phone number!");
         }
     })
+    if ( document.URL == "http://localhost:8094/contact.html") {
+        $(".contact-nav").addClass("nav-active");
+    } 
+    if ( document.URL == "http://localhost:8094/aboutUs.html") {
+        $(".about").addClass("nav-active");
+        
+    } 
+    $("submit-btn").submit(function(e){
+        return false;
+    })
 
 })
 function validateEmail(email) {

@@ -5,7 +5,7 @@ layout: src/templates/layouts/1column.hbs
 <div class="container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">Hello World</li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
@@ -46,21 +46,21 @@ layout: src/templates/layouts/1column.hbs
 </div>
 {{!GRID}}
 <div class="row mb-5">
-    <div class="col-12 col-md-4 grid-info">
-        <img class="d-block grid-img" src="{{assets}}/images/Grid1.png" alt="Alhambra Collection">
+    <a class="col-12 col-md-4 grid-info" href ="../../../aboutUs.html">
+        <img class="d-block grid-img" src="{{assets}}/images/Grid1.png" alt="Our Story Image">
         <div id="overlay-gray"></div>
         <h5 class="overlay-center">OUR BRAND STOY</h5>
-    </div>
-    <div class="col-12 col-md-4 grid-info">
+    </a>
+    <a class="col-12 col-md-4 grid-info" href ="../../../collections.html">
         <img class="d-block grid-img" src="{{assets}}/images/Grid2.jpg" alt="Alhambra Collection">
         <div id="overlay-gray"></div>
         <h5 class="overlay-center">ALHAMBRA COLLECTION</h5>
-    </div>
-    <div class="col-12 col-md-4 grid-info">
-        <img class="d-block grid-img" src="{{assets}}/images/Grid3.jpg" alt="Alhambra Collection">
+    </a>
+    <a class="col-12 col-md-4 grid-info" href ="../../../collections.html">
+        <img class="d-block grid-img" src="{{assets}}/images/Grid3.jpg" alt="Christmas Collection">
         <div id="overlay-gray"></div>
         <h5 class="overlay-center"> CHRISTMAS COLLECTION</h5>
-    </div>
+    </a>
 </div>
 <div class="message center mt-5 mb-5">
     <h5 class="display-5 mb-5">Featured Products</h5>
@@ -70,7 +70,7 @@ layout: src/templates/layouts/1column.hbs
 <div class="card-section">
 <div class="card-columns cards-desktop mb-5">
   <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Product 1">
     <div class="card-body">
       <h5 class="card-title">Product title 1</h5>
       <p class="card-text">$100.00</p>
@@ -89,7 +89,7 @@ layout: src/templates/layouts/1column.hbs
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage2.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage2.jpg" alt="Product 2">
     <div class="card-body">
       <h5 class="card-title">Product title 2</h5>
       <p class="card-text">$100.00</p>
@@ -108,7 +108,7 @@ layout: src/templates/layouts/1column.hbs
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
     <div class="card-body">
       <h5 class="card-title">Product title 3</h5>
       <p class="card-text">$100.00</p>
@@ -127,7 +127,7 @@ layout: src/templates/layouts/1column.hbs
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Product 4">
     <div class="card-body">
       <h5 class="card-title">Product title 4</h5>
       <p class="card-text">$100.00</p>
@@ -146,7 +146,7 @@ layout: src/templates/layouts/1column.hbs
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage2.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage2.jpg" alt="Product 5">
     <div class="card-body">
       <h5 class="card-title">Product title 5</h5>
       <p class="card-text">$100.00</p>
@@ -173,7 +173,7 @@ layout: src/templates/layouts/1column.hbs
     <div class="carousel-item active">
         <div class="card-columns-phone">
             <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Product1 ">
     <div class="card-body">
       <h5 class="card-title">Product title 1</h5>
       <p class="card-text">$100.00</p>
@@ -192,7 +192,7 @@ layout: src/templates/layouts/1column.hbs
     </div>
             </div>
             <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage2.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage2.jpg" alt="Product 2">
     <div class="card-body">
       <h5 class="card-title">Product title 2</h5>
       <p class="card-text">$100.00</p>
@@ -215,7 +215,7 @@ layout: src/templates/layouts/1column.hbs
     <div class="carousel-item">
         <div class="card-columns-phone">
         <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
     <div class="card-body">
       <h5 class="card-title">Product title 3</h5>
       <p class="card-text">$100.00</p>
@@ -234,7 +234,7 @@ layout: src/templates/layouts/1column.hbs
     </div>
         </div>
         <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{assets}}/images/CardImage1.jpg" alt="Product 4">
     <div class="card-body">
       <h5 class="card-title">Product title 4</h5>
       <p class="card-text">$100.00</p>
