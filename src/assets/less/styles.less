@@ -185,6 +185,9 @@ ul{
 }
 
 //BODY
+body{
+    background-color: #F4F4F4;
+}
 .carousel-image{
     
 }
@@ -278,6 +281,7 @@ ul{
     right: 15px;
     background: rgba(35,31,32,0.4);
 }
+//CODE FOR CSS VERSION OF THE CAROUSEL
 // .cards-desktop{
 //     @media (max-width:544px) {
 //         display: none!important;
@@ -290,11 +294,52 @@ ul{
 //     }
        
 // }
+.contact-title{
+    margin-top: 75px;
+}
 .cards-desktop{
     display: none;
 }
 .carousel-phone{
     display: none;
 }
+// CONTACT PAGE
 
+.contact-text{
+    font-family: "Helvetica";
+    font-weight: lighter;
+    font-size: 15px;
+}
+.contact{
+    line-height: 2.5;
+    border-right-width: 1px;
+    border-radius: 0rem;
+}
+.contact::placeholder{
+    font-weight: 400;
+    font-family: "Helvetica";
+    font-size: 14px;
+    color:@black;
+}
+.submit-btn{
+    background-color: @brand-primary;
+    color:white;
+    font-weight: 100px;
+    font-size: 14px;
+    width:180px;
+    height: 55px;
+    border-radius:0px;
+    margin-bottom: 30px;
+
+}
+.error-comment{
+    font-weight:lighter;
+    color:red;
+    font-size:13px;
+}
+.success-comment{
+    font-weight:lighter;
+    color:green;
+    font-size:13px;
+}
 
