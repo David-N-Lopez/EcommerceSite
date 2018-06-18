@@ -12,6 +12,8 @@ Respond.to([
         }
     }
 ])
+
+
 $(document).ready(function(){
     $(".go-up").click(function() {
         $('html, body').animate({
@@ -77,29 +79,9 @@ $(document).ready(function(){
             $phoneComment.text("Please enter a correct phone number!");
         }
     })
-    if ( document.URL == "http://localhost:8094/contact.html") {
-        $(".contact-nav").addClass("nav-active");
-    } 
-    if ( document.URL == "http://localhost:8094/aboutUs.html") {
-        $(".about").addClass("nav-active");
-        
-    }
-
-    // var navLinks = $('.nav-link');
-    // navLinks.each(function() {
-    //     $(this).on('click', function(e) {
-    //     
-    //         navLinks.each(function(){
-    //             $(this).removeClass("active");
-    //         })
-    //         $(this).addClass("active");
-    //     });
-
-    // });
-    // $(function() {
-    //     $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-    //   });
-
+    $(function() {
+        $('.nav-link[href*="' + location.pathname.split("/")[1] + '"]').addClass('active');
+      });
     $("submit-btn").submit(function(e){
         return false;
     })
