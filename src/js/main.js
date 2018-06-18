@@ -19,54 +19,62 @@ $(document).ready(function(){
         }, 2000);
      });
     $(".submit-btn").click(function(){
-        var $userName = $(".name").val();
-        var $userEmail = $(".email").val();
-        var $userPhone = $(".phone").val();
+        var $name = $(".name");
+        var $email = $(".email");
+        var $phone =$("phone");
+
+        var $userName = $name.val();
+        var $userEmail =$email.val();
+        var $userPhone = $phone.val();
+
+        var $emailComment = $emailComment;
+        var $phoneComment = $phoneComment;
+        var $nameComment = $(".name-comment > span");
         if($userName == ''){
-            $(".name").removeClass("is-valid");
-            $(".name").addClass("is-invalid");
-            $(".name-comment > span").removeClass("success-comment");
-            $(".name-comment > span").addClass("error-comment");
-            $(".name-comment > span").text("Please include your name!");
+            $name.removeClass("is-valid");
+            $name.addClass("is-invalid");
+            $nameComment.removeClass("success-comment");
+            $nameComment.addClass("error-comment");
+            $nameComment.text("Please include your name!");
         }
         if($userName != ""){
-            $(".name").removeClass("is-invalid");
-            $(".name").addClass("is-valid");
-            $(".name-comment > span").removeClass("error-comment");
-            $(".name-comment > span").addClass("success-comment");
-            $(".name-comment > span").text("Looking good!")
+            $name.removeClass("is-invalid");
+            $name.addClass("is-valid");
+            $nameComment.removeClass("error-comment");
+            $nameComment.addClass("success-comment");
+            $nameComment.text("Looking good!")
 
 
         }
         if(validateEmail($userEmail)){
-            $(".email").removeClass("is-invalid");
-            $(".email").addClass("is-valid");
-            $(".email-comment > span").removeClass("error-comment");
-            $(".email-comment > span").addClass("success-comment");
-            $(".email-comment > span").text("Looking Good!");
+           $email.removeClass("is-invalid");
+           $email.addClass("is-valid");
+            $emailComment.removeClass("error-comment");
+            $emailComment.addClass("success-comment");
+            $emailComment.text("Looking Good!");
         }
         if(!(validateEmail($userEmail))){
-            $(".email").removeClass("is-valid");
-            $(".email").addClass("is-invalid");
-            $(".email-comment > span").removeClass("success-comment");
-            $(".email-comment > span").addClass("error-comment");
-            $(".email-comment > span").text("Please type in a correct email!");
+           $email.removeClass("is-valid");
+           $email.addClass("is-invalid");
+            $emailComment.removeClass("success-comment");
+            $emailComment.addClass("error-comment");
+            $emailComment.text("Please type in a correct email!");
             
         }
 
         if(validatePhone($userPhone)){
-            $(".phone").removeClass("is-invalid");
-            $(".phone").addClass("is-valid");
-            $(".phone-comment > span").removeClass("error-comment");
-            $(".phone-comment > span").addClass("success-comment");
-            $(".phone-comment > span").text("Looking good!");
+           $phone.removeClass("is-invalid");
+           $phone.addClass("is-valid");
+            $phoneComment.removeClass("error-comment");
+            $phoneComment.addClass("success-comment");
+            $phoneComment.text("Looking good!");
         }
         if(!(validatePhone($userPhone))){
-            $(".phone").removeClass("is-valid");
-            $(".phone").addClass("is-invalid");
-            $(".phone-comment > span").removeClass("success-comment");
-            $(".phone-comment > span").addClass("error-comment");
-            $(".phone-comment > span").text("Please enter a correct phone number!");
+           $phone.removeClass("is-valid");
+           $phone.addClass("is-invalid");
+            $phoneComment.removeClass("success-comment");
+            $phoneComment.addClass("error-comment");
+            $phoneComment.text("Please enter a correct phone number!");
         }
     })
     if ( document.URL == "http://localhost:8094/contact.html") {
@@ -75,7 +83,23 @@ $(document).ready(function(){
     if ( document.URL == "http://localhost:8094/aboutUs.html") {
         $(".about").addClass("nav-active");
         
-    } 
+    }
+
+    // var navLinks = $('.nav-link');
+    // navLinks.each(function() {
+    //     $(this).on('click', function(e) {
+    //     
+    //         navLinks.each(function(){
+    //             $(this).removeClass("active");
+    //         })
+    //         $(this).addClass("active");
+    //     });
+
+    // });
+    // $(function() {
+    //     $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    //   });
+
     $("submit-btn").submit(function(e){
         return false;
     })
