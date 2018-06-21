@@ -1,61 +1,122 @@
 {
-    "facets" : [
+    "categories" : [
         {
-        "category" : "Attribute Category",
+        "category" : "Category Name 01",
         "filters" : [{
-            "name" : "Attribute 1",
-            "results" : 123,
-            "url" : "/filter/attribute/1"
+            "subcategory" : {"Subcategory01":[
+                                    {
+                                    "attributeCategory01":["attribute 01",
+                                                            "attribute 02",
+                                                            "attribute 03",
+                                                            "attribute 04"]},
+                                    {
+                                    "attribute Category 02":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 03":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 04":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]} ]},
+            "results" : 6,
+            "url" : "/filter/subcategory/1"
         },{
-            "name" : "Attribute 2",
-            "results" : 43,
-            "url" : "/filter/attribute/2"
-        },{
-            "name" : "Attribute 3",
-            "results" : 12,
-            "url" : "/filter/attribute/3"
-        },{
-            "name" : "Attribute 4",
-            "results" : 54,
-            "url" : "/filter/attribute/4"
-        }]
-    },{
-        "category" : "Attribute Category",
-        "filters" : [{
-            "name" : "Attribute 1",
-            "results" : 33,
-            "url" : "/filter/attribute/1"
-        },{
-            "name" : "Attribute 2",
-            "results" : 23,
-            "url" : "/filter/attribute/2"
-        },{
-            "name" : "Attribute 3",
-            "results" : 12,
-            "url" : "/filter/attribute/3"
-        },{
-            "name" : "Attribute 4",
+            "subcategory" : {"Subcategory 2":[
+                                    {
+                                    "attribute Category 01":["attribute 01",
+                                                            "attribute 02",
+                                                            "attribute 03",
+                                                            "attribute 04"]},
+                                    {
+                                    "attribute Category 02":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 03":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 04":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]}  ]},
             "results" : 3,
-            "url" : "/filter/attribute/4"
+            "url" : "/filter/subcategory/2"
+        },{
+            "subcategory" : {"Subcategory 3":[
+                                    {
+                                    "attribute Category 01":["attribute 01",
+                                                            "attribute 02",
+                                                            "attribute 03",
+                                                            "attribute 04"]},
+                                    {
+                                    "attribute Category 02":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 03":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 04":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]}  ]},
+            "results" : 6,
+            "url" : "/filter/subcategory/3"
+        },{
+            "subcategory" : {"Subcategory 4":[
+                                    {
+                                    "attribute Category 01":["attribute 01",
+                                                            "attribute 02",
+                                                            "attribute 03",
+                                                            "attribute 04"]},
+                                    {
+                                    "attribute Category 02":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 03":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]},
+                                    {
+                                    "attribute Category 04":["attribute 01",
+                                                                "attribute 02",
+                                                                "attribute 03",
+                                                                "attribute 04"]}]},
+            "results" : 4,
+            "url" : "/filter/subcategory/4"
         }]
     },{
-        "category" : "Attribute Category",
+        "category" : "Category Name 02",
         "filters" : [{
-            "name" : "Attribute 1",
-            "results" : 43,
-            "url" : "/filter/attribute/1"
+            "subcategory" : "Subcategory01",
+            "results" : 3,
+            "url" : "/filter/subcategory/1"
         },{
-            "name" : "Attribute 2",
-            "results" : 63,
-            "url" : "/filter/attribute/2"
+            "subcategory" : "Subcategory 2",
+            "results" : 5,
+            "url" : "/filter/subcategory/2"
         },{
-            "name" : "Attribute 3",
-            "results" : 12,
-            "url" : "/filter/attribute/3"
+            "subcategory" : "Subcategory 3",
+            "results" : 3,
+            "url" : "/filter/subcategory/3"
         },{
-            "name" : "Attribute 4",
-            "results" : 11,
-            "url" : "/filter/attribute/4"
+            "subcategory" : "Subcategory 4",
+            "results" : 4,
+            "url" : "/filter/subcategory/4"
         }]
     }],
     "activeFacets" : [],
@@ -77,15 +138,29 @@
         },{
             "name" : "Price Desc.",
             "url"  : "/sort/price/desc"
-        }],
-        "productsShown": [12,18,24,46, 120]
+        }]
     },
 
     "catalog": [{
         "name": "Product Title 01",
+        "category":"Category Name 01",
+        "subcategory": [{"Subcategory01":
+                            [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                            {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                            {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                            {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
+                       {"Subcategory 2":
+                            [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                            {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                            {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                            {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
         "id": "761",
+        "promo": true,
         "sku": "14WPN7BW",
-        "price": 75,
+        "price": {
+            "regular":75,
+            "special":45
+        },
         "subtotal": 75,
         "img": "http://placehold.it/500x500",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
@@ -115,7 +190,19 @@
     },
         {
             "name": "Product Title 02",
+            "category":"Category Name 02",
+            "subcategory": [{"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
+                            {"Subcategory 2":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "762",
+            "promo":true,
             "sku": "14WPN7BR",
             "price": {
                 "regular": 75,
@@ -149,11 +236,23 @@
         },
         {
             "name": "Product Title 03",
+            "category":"Category Name 01",
+            "subcategory": [{"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
+                            {"Subcategory 2":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "775",
+            "promo":false,
             "sku": "13HCS7J",
             "price": {
                 "regular": 75,
-                "special": null
+                "special": 33.00
             },
             "img": "http://placehold.it/500x500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
@@ -183,7 +282,19 @@
         },
         {
             "name": "Product Title 04",
+            "category":"Category Name 02",
+            "subcategory": [{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
+                            {"Subcategory 2":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "776",
+            "promo": false,
             "sku": "13HCS7EL",
             "price": {
                 "regular": 80,
@@ -217,11 +328,23 @@
         },
         {
             "name": "Product Title 05",
+            "category":"Category Name 02",
+            "subcategory": [{"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory 2":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "777",
+            "promo": true,
             "sku": "13HCS7CR",
             "price": {
                 "regular": 70,
-                "special": null
+                "special": 45
             },
             "img": "http://placehold.it/500x500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
@@ -251,7 +374,24 @@
         },
         {
             "name": "Product Title 06",
+            "category":"Category Name 01",
+            "subcategory": [{"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
+                            {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "778",
+            "promo":true,
             "sku": "13HCS7B",
             "price": {
                 "regular": 160,
@@ -285,7 +425,331 @@
         },
         {
             "name": "Product Title 07",
+            "category":"Category Name 01",
+            "subcategory":[{"Subcategory 2":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
+                            {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":true,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": null
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 08",
+            "category":"Category Name 01",
+            "subcategory":[{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":false,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": null
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 09",
+            "category":"Category Name 01",
+            "subcategory":[ {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":false,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": 100
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 10",
+            "category":"Category Name 01",
+            "subcategory":[{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":true,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": null
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 11",
+            "category":"Category Name 01",
+            "subcategory": [ {"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":true,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": null
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 12",
+            "category":"Category Name 01",
+            "subcategory":[  {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":false,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": 100
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 13",
+            "category":"Category Name 01",
+            "subcategory":[{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "id": "778",
+            "promo":true,
+            "sku": "13HCS7B",
+            "price": {
+                "regular": 160,
+                "special": 140
+            },
+            "img": "http://placehold.it/500x500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
+            "qty": 100,
+            "ribbon": "",
+            "rating": 3.5,
+            "colors": [{
+                "name": "Purple",
+                "code": "#872e42"
+            },
+                {
+                    "name": "Blue",
+                    "code": "#16989c"
+                },
+                {
+                    "name": "Green",
+                    "code": "#66b99d"
+                },
+                {
+                    "name": "Pink",
+                    "code": "#fd6068"
+                },
+                {
+                    "name": "Orange",
+                    "code": "#e66e2b"
+                }]
+        },
+        {
+            "name": "Product Title 14",
+            "category":"Category Name 02",
+            "subcategory":[{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "801",
+            "promo":true,
             "sku": "14WPN7TC",
             "price": {
                 "regular": 75,
@@ -318,12 +782,19 @@
                 }]
         },
         {
-            "name": "Product Title 08",
+            "name": "Product Title 15",
+            "category":"Category Name 02",
+            "subcategory":[ {"Subcategory 3":
+                                    [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                    {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                    {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                    {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "802",
+            "promo":true,
             "sku": "14WPN7RC",
             "price": {
                 "regular": 75,
-                "special": null
+                "special": 70
             },
             "img": "http://placehold.it/500x500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
@@ -352,8 +823,20 @@
                 }]
         },
         {
-            "name": "Product Title 09",
+            "name": "Product Title 16",
+            "category":"Category Name 02",
+            "subcategory":[{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "806",
+            "promo":true,
             "sku": "14WPN7SV",
             "price": {
                 "regular": 75,
@@ -386,8 +869,20 @@
                 }]
         },
         {
-            "name": "Product Title 10",
+            "name": "Product Title 17",
+            "category":"Category Name 02",
+            "subcategory": [{"Subcategory 4":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory 3":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "809",
+            "promo":true,
             "sku": "14WPN7PE",
             "price": {
                 "regular": 75,
@@ -420,7 +915,18 @@
                 }]
         },
         {
-            "name": "Product Title 11",
+            "name": "Product Title 18",
+            "category":"Category Name 02",
+            "subcategory": [{"Subcategory01":
+                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
+                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
+                            {"Subcategory 2":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
+                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
+                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
             "id": "837",
             "sku": "14WPN7BJ",
             "price": {

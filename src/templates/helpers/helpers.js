@@ -36,6 +36,22 @@ var helpers = {
             ret = inverse(this);
         }
         return ret;
+    },
+    getDataAtIndex: function(categoryName, catalog, index, feature, condition, name){
+        var i = 0;
+        var array = [];
+        for(;i<catalog.length;i++){
+            var catName = catalog[i].category;
+            var getFeature = eval("catalog[i]"+"."+feature);
+            if (catName == categoryName && getFeature != condition && name == true){
+                array.push(catalog[i].name);
+            }
+            if (catName == categoryName && getFeature != condition && name == false){
+                array.push(getFeature);
+            }
+            
+        }
+        return array[index];
     }
 };
 

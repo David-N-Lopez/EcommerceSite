@@ -1,7 +1,7 @@
 --- component: header ---
 
 <header id="masthead" class="masthead" name="masthead">
-    
+
     <div class="masthead-top">
         <div class="container">
             <div class="row justify-content-end hide-phone-display">
@@ -22,59 +22,70 @@
                 </div>
 
             </div>
-    
+
         </div>
     </div>
     <div class="masthead_bottom">
         <nav class=" navbar sticky-top navbar-expand-md navbar-light row" style="background-color: white">
             <div class="container">
-            <div class="col-md-8 col-8">
-                <div class="row">
-                    {{!logo}}
-                    <div class="col-md-3 col-12">
-                        <a class="navbar-brandx" href="/">
-                            <img src="{{assets}}/images/logo.gif" alt="{{site.title}}" class="brand" />
-                        </a>
-                        <button class="navbar-toggler ml-5 mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    {{!dropdown}}
-                    <div class="collapse navbar-collapse col-md-9" id="navbarSupportedContent">
-                        <ul class="navbar-nav full-container ml-4 row" id="navigation">
-                            <li class="col-md-3 nav-item mt-1 mr-2">
-                                <a class="nav-link browse" href="../../../collections.html">Browse</a> 
-                            </li>
-                            <li class="col-md-3 nav-item mt-1 mr-2">
-                                <a class="nav-link about" href="../../../aboutUs.html">About</a>
-                            </li>
-                            <li class="col-md-3 nav-item mt-1 mr-2">
-                                <a class="nav-link contact-nav justify-content-right" href="../../../contact.html">Contact us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            {{!search bar}}
-            <div class="col-md-4 col-4">
-                <div class="row">
-                   
-                    <div class="input-group col-md-9 mt-2 col-4">
-                        <input type="text" class="form-control hide-tablet-display" aria-label="Search" placeholder="Search">
-                        <div class="input-group-prepend phone-display-search ">
-                            <input type="image" class="input-group-image" id="inputGroup-sizing-default" src="{{assets}}/images/search-grey-512.png"
-                            />
+                <div class="col-md-8 col-8">
+                    <div class="row">
+                        {{!logo}}
+                        <div class="col-md-3 col-12">
+                            <a class="navbar-brandx" href="/">
+                                <img src="{{assets}}/images/logo.gif" alt="{{site.title}}" class="brand" />
+                            </a>
+                            <button class="navbar-toggler ml-5 mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        {{!dropdown}}
+                        <div class="collapse navbar-collapse col-md-9" id="navbarSupportedContent">
+                            <ul class="navbar-nav full-container ml-4 row" id="navigation">
+                                <li class="col-md-3 nav-item mt-1 mr-2">
+                                    <div class="dropdown">
+                                        <a class="nav-link browse" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Browse
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                            <button class="dropdown-item" type="button"><a href="../../../collections.html" class="dropdown-item">Category 01</a></button>
+                                            <button class="dropdown-item" type="button"><a href="../../../collections.html" class="dropdown-item">Category 02</a></button>
+                                            <button class="dropdown-item" type="button"><a href="../../../PLP.html" class="dropdown-item">Product Listing Page</a></button>
+                                            <button class="dropdown-item" type="button"><a href="../../../PLPG.html" class="dropdown-item">Product Listing Page Grid</a></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 nav-item mt-1 mr-2">
+                                    <a class="nav-link about" href="../../../aboutUs.html">About</a>
+                                </li>
+                                <li class="col-md-3 nav-item mt-1 mr-2">
+                                    <a class="nav-link contact-nav justify-content-right" href="../../../contact.html">Contact us</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    {{!cart}}
-                    <a class="col-md-3 mt-3 pt-1 col-4" href="#wish" aria-label="wish list" >
-                        <img class="small-icon" src="{{assets}}/images/shopping_cart.png"/>
-                    </a>
                 </div>
-                
+                {{!search bar}}
+                <div class="col-md-4 col-4">
+                    <div class="row">
+
+                        <div class="input-group col-md-9 mt-2 col-4">
+                            <input type="text" class="form-control hide-tablet-display" aria-label="Search" placeholder="Search">
+                            <div class="input-group-prepend phone-display-search ">
+                                <input type="image" class="input-group-image" id="inputGroup-sizing-default" src="{{assets}}/images/search-grey-512.png"
+                                />
+                            </div>
+                        </div>
+                        {{!cart}}
+                        <a class="col-md-3 mt-3 pt-1 col-4" href="#wish" aria-label="wish list">
+                            <img class="small-icon" src="{{assets}}/images/shopping_cart.png" />
+                        </a>
+                    </div>
+
+                </div>
             </div>
-    </div>
     </div>
     </nav>
     </div>
