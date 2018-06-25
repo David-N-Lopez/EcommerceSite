@@ -43,25 +43,58 @@ layout: src/templates/layouts/2column-left-plp.hbs
 
     </div>
 <hr class="mt-1">
-<div class="row">
-  
-    <div class="col-3">
-        <div class="card">
+
+<div class="row ">
+  {{#each (getDataArray site.categories.0.category site.catalog) }}
+    <div class="col-4 mt-5">
+        <a href="../../../PDP.html">
+        <div class="card card-img-side">
+            {{#if this.ribbon}}
        
-             <img class="plp-img" src="{{assets}}/images/CardImage1.jpg" alt="Product1 ">
+                <h5 class="{{this.ribbon}}">{{this.ribbon}}</h5>
+
+            {{/if}}
+  
+
+             <img class="plp-img" src="../../assets/images/{{this.img}}"  alt="Product1 ">
     
         </div>
+        </a>
     </div>
-    <div class="col-9">
-       <h5 class="card-title">{{#getDataAtIndex site.categories.0.category site.catalog 0 "ribbon" "" true}}{{/getDataAtIndex}}</h5>
-      <p class="card-text">${{#getDataAtIndex site.categories.0.category site.catalog 0 "price.special" null false}}{{/getDataAtIndex}}.00</p>
-      <div class="inline-group mb-3">
+    <div class="col-8 mt-5">
+       <h5 class="card-title mb-0">{{this.name}}</h5>
+      <div class="inline-group mb-1">
           <span aria-hidden="true" class="icon-star"></span>
           <span aria-hidden="true" class="icon-star"></span>
           <span aria-hidden="true" class="icon-star"></span>
           <span aria-hidden="true" class="icon-star"></span>
           <span aria-hidden="true" class="icon-star-outline"></span>
         </div>
+        <br>
+               {{#if this.price.special}}
+        <strike class="price-tag-plp inline">${{this.price.regular}}.00</strike>
+        <p class="special-price-tag-plp inline">${{this.price.special}}.00</p>
+        {{else}}
+             <p class="price-tag-plp inline">${{this.price.regular}}.00</p>
+        {{/if}}
+       
+        <br>
+          <div class="inline-group mb-1">
+              <span aria-hidden="true" class="circle" style="background-color:{{this.colors.0.code}}"></span>
+               <span aria-hidden="true" class="circle" style="background-color:{{this.colors.1.code}}"></span>
+                <span aria-hidden="true" class="circle" style="background-color:{{this.colors.2.code}}"></span>
+                 <span aria-hidden="true" class="circle" style="background-color:{{this.colors.3.code}}"></span>
+                  <span aria-hidden="true" class="circle" style="background-color:{{this.colors.4.code}}"></span>
+          </div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+     <div class="inline-group mb-3">
+      <button class="btn card-btn">Add to Cart</button>
+      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+      <span aria-hidden="true" class="icon-compare "></span>
+      </div>
 </div>
+
+
+   {{/each}}
+
 

@@ -37,6 +37,7 @@ var helpers = {
         }
         return ret;
     },
+
     getDataAtIndex: function(categoryName, catalog, index, feature, condition, name){
         var i = 0;
         var array = [];
@@ -52,6 +53,29 @@ var helpers = {
             
         }
         return array[index];
+    },
+    getDataArray: function(categoryName, catalog){
+        var i = 0;
+        var array = [];
+        for(;i<catalog.length;i++){
+            var catName = catalog[i].category;
+            if (catName == categoryName){
+                array.push(catalog[i]);
+            }
+        }
+        return array;
+    },
+    ifEquals: function(element1, element2, feature){
+        var compare = eval("element1"+"."+ feature);
+        var array = [];
+        if(compare==element2){
+            array.push(element2);
+        }
+        if (array.length>0){
+            return array;
+
+        }
+      
     }
 };
 

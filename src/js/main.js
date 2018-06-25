@@ -1,3 +1,4 @@
+//CARD CAROUSEL FOR PHONE SCREENS
 Respond.to([
     {
         'media': '(min-width: 768px)',
@@ -5,23 +6,12 @@ Respond.to([
             $(".cards-desktop").show();
         },
         'else': function(){
-            // var cardsPhone = document.getElementsByClassName("card-section-phone");
-            // $(cardsPhone).toggleClass("carousel-phone");
             $(".cards-desktop").hide();
             $(".carousel-phone").show();
         }
     }
 ])
-
-// Handlebars.registerHelper('ifEquals', function(arg1, arg2) {
-//     if (arg1 == arg2){
-//         return "hello";
-//     }
-// });
-// Handlebars.registerHelper('eachInArray', function(arg1, arg2) {
-//     var i = 0;
-//     for(;i<arg;
-// });
+//ANIMATION "BACK TO TOP"
 $(document).ready(function(){
     $(".go-up").click(function() {
         $('html, body').animate({
@@ -35,9 +25,26 @@ $(document).ready(function(){
         return false;
     })
 
+ $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+       autoplay: false
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    centerMode:true,
+    dots: false,
+    arrows:true,
+    prevArrow: $('.top-arrow'),
+    nextArrow: $('.bottom-arrow'),
+    vertical:true,
+    focusOnSelect: true
+  
+  });
+          
 })
-// Handlebars.registerHelper('firstPromoItem', function(categoryName1, catalog) {
-//     catalog.forEach(function() {
-//         // console.log(item, index)
-//     })
-// });

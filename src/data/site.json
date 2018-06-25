@@ -5,22 +5,22 @@
         "filters" : [{
             "subcategory" : {"Subcategory01":[
                                     {
-                                    "attributeCategory01":["attribute 01",
+                                    "attributeCategory":["attribute 01",
                                                             "attribute 02",
                                                             "attribute 03",
                                                             "attribute 04"]},
                                     {
-                                    "attribute Category 02":["attribute 01",
+                                    "attributeCategory":["attribute 01",
                                                                 "attribute 02",
                                                                 "attribute 03",
                                                                 "attribute 04"]},
                                     {
-                                    "attribute Category 03":["attribute 01",
+                                    "attributeCategory":["attribute 01",
                                                                 "attribute 02",
                                                                 "attribute 03",
                                                                 "attribute 04"]},
                                     {
-                                    "attribute Category 04":["attribute 01",
+                                    "attributeCategory":["attribute 01",
                                                                 "attribute 02",
                                                                 "attribute 03",
                                                                 "attribute 04"]} ]},
@@ -141,7 +141,7 @@
         }]
     },
 
-    "catalog": [{
+    "catalog": [{ 
         "name": "Product Title 01",
         "category":"Category Name 01",
         "subcategory": [{"Subcategory01":
@@ -162,11 +162,11 @@
             "special":45
         },
         "subtotal": 75,
-        "img": "http://placehold.it/500x500",
+        "img": "CardImage2.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
         "qty": 100,
         "ribbon": "New",
-        "rating": 5,
+        "number-of-ratings": 5,
         "colors": [{
             "name": "Purple",
             "code": "#872e42"
@@ -208,11 +208,11 @@
                 "regular": 75,
                 "special": 49.99
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "Sale",
-            "rating": 4,
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -254,11 +254,11 @@
                 "regular": 75,
                 "special": 33.00
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 4.3,
+            "ribbon": "Sale",
+            "number-of-ratings": 4.3,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -300,11 +300,11 @@
                 "regular": 80,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 4,
+            "ribbon": "New",
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -346,11 +346,11 @@
                 "regular": 70,
                 "special": 45
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 4,
+            "ribbon": "Sale",
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -397,11 +397,11 @@
                 "regular": 160,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 3.5,
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -448,11 +448,11 @@
                 "regular": 160,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 3.5,
+            "ribbon": "Sale",
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -494,11 +494,11 @@
                 "regular": 160,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage3.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 3.5,
+            "ribbon": "New",
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -535,11 +535,11 @@
                 "regular": 160,
                 "special": 100
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 3.5,
+            "ribbon": "New",
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -581,11 +581,11 @@
                 "regular": 160,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 3.5,
+            "ribbon": "Sale",
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -622,11 +622,11 @@
                 "regular": 160,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage3.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 3.5,
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -663,11 +663,11 @@
                 "regular": 160,
                 "special": 100
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 3.5,
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -709,11 +709,11 @@
                 "regular": 160,
                 "special": 140
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 3.5,
+            "ribbon": "Sale",
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -755,11 +755,11 @@
                 "regular": 75,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
-            "ribbon": "",
-            "rating": 4,
+            "ribbon": "Sale",
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -796,11 +796,11 @@
                 "regular": 75,
                 "special": 70
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage1.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 3.5,
+            "number-of-ratings": 3.5,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -842,11 +842,11 @@
                 "regular": 75,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 4,
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -888,11 +888,11 @@
                 "regular": 75,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage3.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 4,
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"
@@ -933,11 +933,11 @@
                 "regular": 75,
                 "special": null
             },
-            "img": "http://placehold.it/500x500",
+            "img": "CardImage2.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget eros eu felis aliquet elementum. Proin vel mauris tincidunt, condimentum nisi in, pretium sapien. Proin augue ligula, euismod eu elementum non, sagittis sed leo. Nunc interdum eros non tellus interdum laoreet.",
             "qty": 100,
             "ribbon": "",
-            "rating": 4,
+            "number-of-ratings": 4,
             "colors": [{
                 "name": "Purple",
                 "code": "#872e42"

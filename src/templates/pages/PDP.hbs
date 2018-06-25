@@ -1,0 +1,77 @@
+---
+title: Home 
+layout: src/templates/layouts/1columnWBread.hbs
+---
+
+<div class="row">
+    <div class="col-6 pdp-carousel">
+        <div class="slider-for">
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="cardIMG"  draggable="false" class="top-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
+	</div>
+</div>
+<button type="button" class="slick-prev top-arrow"><img class="slider-img"src="{{assets}}/images/Group3upArrow.png"></button>
+<button type="button" class="slick-prev bottom-arrow"><img class="slider-img"src="{{assets}}/images/Group3downArrow.png"></button>
+
+<div class="slider-nav mb-5">
+  
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image"  draggable="false" class="nav-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
+	</div>
+	<div class="slider-item">
+		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
+	</div>
+</div>
+    </div>
+    <div class="col-6">
+        <div class="ml-4">
+        <h3>{{site.catalog.0.name}}</h3>
+
+            <p class="grey inline mt-2 mr-2 mb-2">SKU: {{site.catalog.0.name}}</p>
+            <p class="grey inline m-2">Availability: {{#if site.catalog.0.qty}}In Stock{{/if}} </p>
+            <br>
+        <div class="inline-group mt-3 mr-3 mb-3">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+            </div>
+        <p class="inline bold">{{site.catalog.0.number-of-ratings}} Reviews  |  Write a Review</p>
+        <br>
+        {{#if site.catalog.0.price.special}}
+        <strike class="price-tag inline">${{site.catalog.0.price.regular}}.00</strike>
+        <p class="special-price-tag inline">${{site.catalog.0.price.special}}.00</p>
+        {{/if}}
+        <br>
+         <input type="number" name="qty" class="inline qty-input" placeholder="qty.">
+        <button type="submit" class="btn add-to-cart-btn m-2 inline">Add to Cart</button>
+        <br>
+        <button type="submit" class="btn checkout-btn">Checkout with PayPal</button>
+    </div>
+
+    </div>
+
+
+</div>
