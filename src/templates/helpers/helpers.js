@@ -75,8 +75,8 @@ var helpers = {
             return array;
 
         }
-      
-    }
+    },
+    
 };
 
 module.exports.register = function (Handlebars, options) {

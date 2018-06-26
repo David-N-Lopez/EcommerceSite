@@ -1,0 +1,94 @@
+@import "utilities.less";
+
+.footer-link{
+    .white-color;
+}
+.footer-link:hover{
+    .white-color;
+}
+.footer-link:visited{
+    .white-color;
+}
+.footer-title{
+    color: @brand-primary;
+}
+.form-control-footer{
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+.sign-up{
+    background-color:@brand-primary;
+    color:@white; 
+    border-radius: 0%;
+    width:100%;
+}
+.newsletter{
+    border-width: 1px;
+    border-color: @white;
+    background-color: @black;
+}
+.icon-twitter,
+.icon-pinterest,
+.icon-instagram,
+.icon-youtube,
+.icon-facebook{
+    @media (max-width:544px){//how can I store this as functions maybe
+        margin:5px;     
+    }
+}
+.phone-center{
+    @media (max-width:544px){//how can I store this as functions maybe
+        text-align: center;  
+        margin-right: 10%; 
+    }
+}
+
+.sign-up-field{
+    .inline-button{
+        display: none;
+    }
+    @media (max-width:544px){//how can I store this as functions maybe
+        .newsletter{
+            background-color:@white; 
+
+        }
+        .inline-button{
+            display: inline;
+            background-color: @brand-primary;
+            max-height: 60px;
+            border-width: 8px;
+            border-color: @white;
+            padding-top: 10px;
+        }
+        #bottom-sign-up{
+            display: none;
+        }
+    }
+}
+.phone-place-first{
+    @media (max-width:544px){
+        order:-1;
+    }
+}
+.about{
+    padding-left:30px!important;
+}
+.browse{
+    padding-left:30px!important;
+    background-color: @white;
+    border: none;
+    font-weight: bold;
+}
