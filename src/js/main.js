@@ -13,7 +13,7 @@ Respond.to([
 ])
 //ANIMATION "BACK TO TOP"
 $(document).ready(function(){
-    $(".go-up").click(function() {
+    $(".js-go-up").click(function() {
         $('html, body').animate({
             scrollTop: 0
         }, 2000);
@@ -46,5 +46,38 @@ $(document).ready(function(){
     focusOnSelect: true
   
   });
-          
+  
+    let $detailBtn =  $(".js-btn-details");
+    let $detailContent = $(".js-detail-content");
+    let $moreInfoBtn = $(".js-btn-more-info");
+    let $moreInfoContent = $(".js-more-info-content");
+    let $reviewBtn = $(".js-btn-reviews");
+    let $reviewContent = $(".js-review-content");
+    $detailBtn.click(function(){
+        $detailBtn.addClass("active-more-info");
+        $moreInfoBtn.removeClass("active-more-info");
+        $reviewBtn.removeClass("active-more-info");
+        $detailContent.show();
+        $moreInfoContent.hide();
+        $reviewContent.hide();
+
+    });
+    $moreInfoBtn.click(function(){
+        $detailBtn.removeClass("active-more-info");
+        $moreInfoBtn.addClass("active-more-info");
+        $reviewBtn.removeClass("active-more-info");
+        $detailContent.hide();
+        $moreInfoContent.show();
+        $reviewContent.hide();
+    });
+    $reviewBtn.click(function(){
+        $detailBtn.removeClass("active-more-info");
+        $moreInfoBtn.removeClass("active-more-info");
+        $reviewBtn.addClass("active-more-info");
+        $detailContent.hide();
+        $moreInfoContent.hide();
+        $reviewContent.show();
+    });
+        
 })
+

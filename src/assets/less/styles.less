@@ -257,24 +257,24 @@ body{
 .slider-for{
 	max-width: 500px;
 	height: 250px;
-	margin: 30px auto 1px;
+	margin-top:55px;
     overflow: hidden;
     order: 1;
 }
 .slider-nav{
 	width: 500px;
-	height: 85px;
+	height: 105px;
 	margin: auto;
 }
 .slider-nav .slick-track{
-    height: 85px;
+    height: 100px;
 }
 .slider-nav{
     width:150px;
 }
 .top-slider{
-    height:230px;
-    max-width: 300px;
+    height:290px;
+    max-width: 350px;
 }
 .nav-slider{
     max-height: 130px;
@@ -282,11 +282,30 @@ body{
     margin-top:3px;
 }
 .slick-vertical > .slick-list{
-    margin-top: -120px;
+    margin-top: -70px;
 }
+.top-arrow{
+    position: absolute;
+    top:10px;
+    border:none;
+    background-color: inherit;
+    left:50px;
+}
+.bottom-arrow{
+    position: absolute;
+    bottom: 10px;
+    border:none;
+    background-color: inherit;
+    left:50px;
+
+}
+.slider-img{
+    max-width: 20px;
+}
+//Product Description
 .price-tag{
     font-weight: 200;
-    font-size: 20px;
+    font-size: 30px;
 
 }
 div.slider-item.slick-slide{
@@ -332,27 +351,65 @@ div.slider-item.slick-slide{
     border-width:1px;
     border-color:@black;
 }
-.top-arrow{
-    position: absolute;
-    border:none;
-    background-color: inherit;
-}
-.bottom-arrow{
-    position: absolute;
-    bottom: 0;
-    border:none;
-    background-color: inherit;
-}
-.slider-img{
-    max-width: 50px;
-}
-//more info PDP
+
+//PDP
 .info-btn-bar {
     background-color: lightgray;
     .black-color;
     border-width:1px;
     border-color:@black;
     border-radius: 0rem;
-    width:150px;
+    width:175px;
+    height:65px;
+    font-size: 13px;
+    font-family:@brand-font;
+    margin-bottom: -1px;
+  
 }
-
+.more-info-style{
+    position: relative;
+    .white-background;
+    .black-color;
+    border-width:1px;
+    border-color:@black;
+    border-radius: 0rem;
+    border-style: solid;
+    z-index: -1;
+    padding: 30px;
+}
+.js-detail-content{
+    .more-info-style;
+}
+.js-more-info-content{
+    display: none;
+    .more-info-style;
+}
+.js-review-content{
+    display:none;
+    .more-info-style;
+}
+.btn-more-info{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.active-more-info{
+    position: relative;
+    .white-background;
+    border-bottom-width: 1px;
+    border-bottom-color:white;
+}
+.info-section{
+    margin-top: 130px;
+    margin-bottom:110px;
+}
+.card-btn-pdp{
+    .card-btn;
+    width:100;
+    font-size: 13px;
+    border-radius: 4%;
+}
+//PDP gift-card
+.gorilla-card-img{
+    height:300px;
+    width: max-content;
+}

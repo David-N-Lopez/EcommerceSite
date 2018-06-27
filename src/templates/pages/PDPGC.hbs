@@ -4,54 +4,17 @@ layout: src/templates/layouts/1columnWBread.hbs
 ---
 
 <div class="row mb-3">
-    <div class="col-6 flex">
-        <div class="slider-for">
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="cardIMG"  draggable="false" class="top-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false" class="top-slider"/>
-	</div>
-</div>
-<button type="button" class="slick-prev top-arrow"><img class="slider-img"src="{{assets}}/images/Group3upArrow.png"></button>
-<button type="button" class="slick-prev bottom-arrow"><img class="slider-img"src="{{assets}}/images/Group3downArrow.png"></button>
 
-<div class="slider-nav vertical-slider">
-  
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image"  draggable="false" class="nav-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
-	</div>
-	<div class="slider-item">
-		<img src="{{assets}}/images/CardImage2.jpg" alt="image" draggable="false"class="nav-slider"/>
-	</div>
-</div>
-    </div>
+        <img src="{{assets}}/images/GorillaCard.png" alt="gorilla card" class="col-6 gorilla-card-img">
+
     <div class="col-6">
-        <div class="ml-4">
-        <h3>{{site.catalog.0.name}}</h3>
+        <div class="ml-4 mr-3">
+        <h3>Gorilla Mailed Gift Card</h3>
 
-            <p class="grey-color inline mt-2 mr-2 mb-2">SKU: {{site.catalog.0.name}}</p>
-            <p class="grey-color inline m-2">Availability: {{#if site.catalog.0.qty}}In Stock{{/if}} </p>
+            <p class="grey-color inline mt-2 mr-2 mb-1">SKU: {{site.catalog.0.name}}</p>
+            <p class="grey-color inline mt-2 mb-1 mr-2">Availability: {{#if site.catalog.0.qty}}In Stock{{/if}} </p>
             <br>
-        <div class="inline-group mt-3 mr-3 mb-3">
+        <div class="inline-group mt-2 mr-3 mb-2">
             <span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star"></span>
@@ -60,15 +23,34 @@ layout: src/templates/layouts/1columnWBread.hbs
             </div>
         <p class="inline bold">{{site.catalog.0.number-of-ratings}} Reviews  |  Write a Review</p>
         <br>
-        {{#if site.catalog.0.price.special}}
-        <strike class="price-tag inline">${{site.catalog.0.price.regular}}.00</strike>
-        <p class="special-price-tag inline">${{site.catalog.0.price.special}}.00</p>
-        {{/if}}
-        <br>
-         <input type="number" name="qty" class="inline qty-input" placeholder="qty.">
-        <button type="submit" class="btn add-to-cart-btn m-2 inline">Add to Cart</button>
-        <br>
-        <button type="submit" class="btn checkout-btn">Checkout with PayPal</button>
+        <form class="row" id="gift-card-form">
+          <div class="col-6 form-group">
+            <label class="bold">Amount<span class="brand-color"> *</span></label>
+            <input type="text" name="amount" class="form-control contact black-border " id="exampleFormControlInput1" placeholder="Other amount">
+          </div>
+          <div class="col-6 form-group">
+             <label class="bold">Amount in US<span class="brand-color"> *</span></label>
+            <input type="text" name="amount" class="form-control contact black-border" id="exampleFormControlInput1" placeholder="Other amount">
+          </div>
+          <div class="col-6 form-group">
+             <label class="bold">Sender Name<span class="brand-color"> *</span></label>
+            <input type="text" name="name" class="form-control contact name black-border" id="exampleFormControlInput1">
+          </div>
+          <div class="col-6 form-group">
+             <label class="bold">Recipient Name<span class="brand-color"> *</span></label>
+            <input type="text" name="name" class="form-control contact name black-border" id="exampleFormControlInput1">
+          </div>
+          <div class="col-12 form-group">
+            <label class="bold">Message:</label>
+            <textarea class="form-control contact required comment black-border" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        
+        
+         <input type="number" name="qty" class="qty-input ml-3" placeholder="qty.">
+        <button type="submit" class="btn add-to-cart-btn inline">Add to Cart</button>
+       </form>
+      
+        <button type="submit" class="btn checkout-btn mt-0">Checkout with PayPal</button>
         <hr>
         <div class="inline">
             <div class="m-3 inline">
@@ -84,7 +66,7 @@ layout: src/templates/layouts/1columnWBread.hbs
                <p class="inline">Email</p>
                </div>
         </div>
-         
+         </div>
     </div>
 
     </div>
