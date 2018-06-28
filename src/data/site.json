@@ -157,6 +157,7 @@
         "id": "761",
         "promo": true,
         "sku": "14WPN7BW",
+        "compare": true,
         "price": {
             "regular":75,
             "special":45
@@ -250,6 +251,7 @@
             "id": "775",
             "promo":false,
             "sku": "13HCS7J",
+            "compare": true,
             "price": {
                 "regular": 75,
                 "special": 33.00
@@ -342,6 +344,7 @@
             "id": "777",
             "promo": true,
             "sku": "13HCS7CR",
+            "compare": true,
             "price": {
                 "regular": 70,
                 "special": 45
@@ -393,6 +396,7 @@
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
+            "compare": true,
             "price": {
                 "regular": 160,
                 "special": null
@@ -490,6 +494,7 @@
             "id": "778",
             "promo":false,
             "sku": "13HCS7B",
+            "compare": true,
             "price": {
                 "regular": 160,
                 "special": null
@@ -577,6 +582,7 @@
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
+            "compare":true,
             "price": {
                 "regular": 160,
                 "special": null

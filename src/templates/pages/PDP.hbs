@@ -58,7 +58,7 @@ layout: src/templates/layouts/1columnWBread.hbs
             <span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star-outline"></span>
             </div>
-        <p class="inline bold">{{site.catalog.0.number-of-ratings}} Reviews  |  Write a Review</p>
+        <p class="inline bold js-go-to-review">{{site.catalog.0.number-of-ratings}} Reviews  |  Write a Review</p>
         <br>
         {{#if site.catalog.0.price.special}}
         <strike class="price-tag inline">${{site.catalog.0.price.regular}}.00</strike>
@@ -92,9 +92,9 @@ layout: src/templates/layouts/1columnWBread.hbs
 
 <div class="info-section">
 <div  class="col-6">
-<button class="btn inline info-btn-bar js-btn-details active-more-info">DETAILS</button>
+<button class="btn inline info-btn-bar js-btn-details ">DETAILS</button>
 <button class="btn inline info-btn-bar js-btn-more-info btn-more-info">MORE INFORMATION</button>
-<button class="btn inline info-btn-bar js-btn-reviews">REVIEWS</button>
+<button class="btn inline info-btn-bar js-btn-reviews active-more-info">REVIEWS</button>
 </div>
 <div class="col-12 info-content">
     <div class="js-detail-content">
@@ -114,7 +114,11 @@ layout: src/templates/layouts/1columnWBread.hbs
         </ul> 
     </div>
     <div class="js-review-content">
-         <h3>Reviews</h3>
+         <h3 class="ml-4 mb-3 mt-4"><span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span> Reviews</h3>
         <ul>
            <li> <span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star"></span>
@@ -140,6 +144,27 @@ layout: src/templates/layouts/1columnWBread.hbs
             <br>
             Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>  
         </ul> 
+        <hr class="mt-4">
+       <h5 class="mt-5 mb-3 ml-2" id="review-form">Write a Review</h5>
+     <div class="row mb-4 ml-2">
+    <form class="col-7 col-md-5" id="contact-form">
+        <label class="sr-only">name input</label>
+        <div class="form-group">
+            <input type="text" name="nickname" class="form-control contact name" id="exampleFormControlInput1" placeholder="Nickname">
+        </div>
+        <div class="name-comment"><span class=""></span></div>
+        <label class="sr-only">email input</label>
+        <div class="form-group">
+            <input type="email" name="title"class="form-control contact email" id="exampleFormControlInput2" placeholder="Review Title">
+        </div>
+        <div class=" email-comment"><span class=""></span> </div>
+        <label class="sr-only">comment input</label>
+        <div class="form-group">
+            <textarea class="form-control contact required comment" id="exampleFormControlTextarea1" rows="3" placeholder="Review"></textarea>
+        </div>
+        <button type="submit" class="btn submit-btn">Submit</button>
+    </form>
+    </div>
      </div>
 </div>
 </div>

@@ -58,6 +58,12 @@
 .flex{
     display: flex;
 }
+.full-width{
+    width:100%;
+}
+.full-height{
+    height:100%;
+}
 //fonts
 .bold{
     font-weight: bold;
@@ -74,6 +80,12 @@
 .regular-font{
     font-size:15px;
 }
+.small-font{
+    font-size: 12px;
+}
+.helvetica{
+    font-family: "Helvetica";
+}
 //style
 .no-list-style{
     list-style-type: none;
@@ -82,4 +94,63 @@
     border-width:1px;
     border-color: @black;
     border-style:solid;
+}
+.no-link-style{
+    color:inherit;
+    &:hover{
+        color: inherit;
+    }
+    &:active{
+        color: inherit;
+    }
+}
+//borders
+.br-black{
+    border-right-color:@black;
+    border-width: 0px;
+    border-right-width:1px;
+    border-style: solid;
+}
+.br-grey{
+    border-right-color:@grey;
+    border-style: solid;
+    border-width: 0px;
+    border-right-width:1px;
+    
+}
+.bl-black{
+    border-left-color:@black;
+    border-style: solid;
+    border-width: 0px;
+    border-left-width:1px;
+}
+.bl-grey{
+    border-left-color:@grey;
+    border-style: solid;
+    border-width: 0px;
+    border-left-width:1px;
+}
+.bb-black{
+    border-bottom-color:@black;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width:1px;
+}
+.bb-grey{
+    border-bottom-color:@grey;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width:1px;
+}
+.bt-black{
+    border-top-color:@black;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width:1px;
+}
+.bt-grey{
+    border-top-color:@grey;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width:1px;
 }

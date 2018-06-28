@@ -18,13 +18,23 @@ $(document).ready(function(){
             scrollTop: 0
         }, 2000);
      });
+     $("js-go-to-review").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#review-form").offset.bottom
+        }, 2000);
+     });
     $(function() {
         $('.nav-link[href*="' + location.pathname.split("/")[1] + '"]').addClass('active-state');
       });
     $("submit-btn").submit(function(e){
         return false;
     })
-
+    scrollTo(".js-go-to-review", "#review-form");
+    $(from).click(function() {
+        $('html, body').animate({
+            scrollTop: $(to).offset.top
+        }, 2000);
+     });
  $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -80,4 +90,11 @@ $(document).ready(function(){
     });
         
 })
+  function scrollTo(from, to){
+    $(from).click(function() {
+        $('html, body').animate({
+            scrollTop: $(to).offset.top
+        }, 2000);
+     });
+}
 

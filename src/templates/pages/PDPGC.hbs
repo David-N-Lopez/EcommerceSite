@@ -1,333 +1,356 @@
 ---
-title: Home 
+title: Home
 layout: src/templates/layouts/1columnWBread.hbs
 ---
 
 <div class="row mb-3">
 
-        <img src="{{assets}}/images/GorillaCard.png" alt="gorilla card" class="col-6 gorilla-card-img">
+  <img src="{{assets}}/images/GorillaCard.png" alt="gorilla card" class="col-6 gorilla-card-img">
 
-    <div class="col-6">
-        <div class="ml-4 mr-3">
-        <h3>Gorilla Mailed Gift Card</h3>
+  <div class="col-6">
+    <div class="ml-4 mr-3">
+      <h3>Gorilla Mailed Gift Card</h3>
 
-            <p class="grey-color inline mt-2 mr-2 mb-1">SKU: {{site.catalog.0.name}}</p>
-            <p class="grey-color inline mt-2 mb-1 mr-2">Availability: {{#if site.catalog.0.qty}}In Stock{{/if}} </p>
-            <br>
-        <div class="inline-group mt-2 mr-3 mb-2">
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star-outline"></span>
-            </div>
-        <p class="inline bold">{{site.catalog.0.number-of-ratings}} Reviews  |  Write a Review</p>
-        <br>
-        <form class="row" id="gift-card-form">
-          <div class="col-6 form-group">
-            <label class="bold">Amount<span class="brand-color"> *</span></label>
-            <input type="text" name="amount" class="form-control contact black-border " id="exampleFormControlInput1" placeholder="Other amount">
+      <p class="grey-color inline mt-2 mr-2 mb-1">SKU: {{site.catalog.0.name}}</p>
+      <p class="grey-color inline mt-2 mb-1 mr-2">Availability: {{#if site.catalog.0.qty}}In Stock{{/if}} </p>
+      <br>
+      <div class="inline-group mt-2 mr-3 mb-2">
+        <span aria-hidden="true" class="icon-star"></span>
+        <span aria-hidden="true" class="icon-star"></span>
+        <span aria-hidden="true" class="icon-star"></span>
+        <span aria-hidden="true" class="icon-star"></span>
+        <span aria-hidden="true" class="icon-star-outline"></span>
+      </div>
+      <p class="inline bold">{{site.catalog.0.number-of-ratings}} Reviews | Write a Review</p>
+      <br>
+      <form class="row" id="gift-card-form">
+        <div class="col-6 form-group">
+          <label class="bold block">Amount
+            <span class="brand-color"> *</span>
+          </label>
+          <div class="selectdiv ">
+  <label>
+      <select class="js-valid-selector">
+          <option selected> Other Amount... </option>
+          <option>$10</option>
+          <option>$25</option>
+          <option>$50</option>
+          <option>$100</option>
+      </select>
+  </label>
+</div>
           </div>
-          <div class="col-6 form-group">
-             <label class="bold">Amount in US<span class="brand-color"> *</span></label>
-            <input type="text" name="amount" class="form-control contact black-border" id="exampleFormControlInput1" placeholder="Other amount">
-          </div>
-          <div class="col-6 form-group">
-             <label class="bold">Sender Name<span class="brand-color"> *</span></label>
-            <input type="text" name="name" class="form-control contact name black-border" id="exampleFormControlInput1">
-          </div>
-          <div class="col-6 form-group">
-             <label class="bold">Recipient Name<span class="brand-color"> *</span></label>
-            <input type="text" name="name" class="form-control contact name black-border" id="exampleFormControlInput1">
-          </div>
-          <div class="col-12 form-group">
-            <label class="bold">Message:</label>
-            <textarea class="form-control contact required comment black-border" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="col-6 form-group">
+          <label class="bold">Amount in USD
+            <span class="brand-color"> *</span>
+          </label>
+          <input type="text" name="amount" class="form-control contact black-border" id="exampleFormControlInput1" placeholder="Minimun:$25.00">
         </div>
-        
-        
-         <input type="number" name="qty" class="qty-input ml-3" placeholder="qty.">
+        <div class="col-6 form-group">
+          <label class="bold">Sender Name
+            <span class="brand-color"> *</span>
+          </label>
+          <input type="text" name="name" class="form-control contact name black-border" id="exampleFormControlInput2">
+        </div>
+        <div class="col-6 form-group">
+          <label class="bold">Recipient Name
+            <span class="brand-color"> *</span>
+          </label>
+          <input type="text" name="name" class="form-control contact name black-border" id="exampleFormControlInput3">
+        </div>
+        <div class="col-12 form-group">
+          <label class="bold">Message:</label>
+          <textarea class="form-control contact required comment black-border" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <input type="number" name="qty" class="qty-input ml-3" placeholder="qty.">
         <button type="submit" class="btn add-to-cart-btn inline">Add to Cart</button>
-       </form>
-      
-        <button type="submit" class="btn checkout-btn mt-0">Checkout with PayPal</button>
-        <hr>
-        <div class="inline">
-            <div class="m-3 inline">
-            <span aria-hidden="true" class="icon-wishlist-outline"></span>
-            <p class="inline">Wishlist</p>
-            </div>
-            <div class="m-3 inline">
-            <span aria-hidden="true" class="icon-compare"></span>
-            <p class="inline">Compare</p>
-            </div>
-            <div class="m-3 inline">
-            <span aria-hidden="true" class="icon-email"></span>
-               <p class="inline">Email</p>
-               </div>
-        </div>
-         </div>
-    </div>
+      </form>
 
+      <button type="submit" class="btn checkout-btn mt-0">Checkout with PayPal</button>
+      <hr>
+      <div class="inline">
+        <div class="m-3 inline">
+          <span aria-hidden="true" class="icon-wishlist-outline"></span>
+          <p class="inline">Wishlist</p>
+        </div>
+        <div class="m-3 inline">
+          <span aria-hidden="true" class="icon-compare"></span>
+          <p class="inline">Compare</p>
+        </div>
+        <div class="m-3 inline">
+          <span aria-hidden="true" class="icon-email"></span>
+          <p class="inline">Email</p>
+        </div>
+      </div>
     </div>
+  </div>
+
+</div>
 </div>
 
 <div class="info-section">
-<div  class="col-6">
-<button class="btn inline info-btn-bar js-btn-details active-more-info">DETAILS</button>
-<button class="btn inline info-btn-bar js-btn-more-info btn-more-info">MORE INFORMATION</button>
-<button class="btn inline info-btn-bar js-btn-reviews">REVIEWS</button>
-</div>
-<div class="col-12 info-content">
+  <div class="col-6">
+    <button class="btn inline info-btn-bar js-btn-details active-more-info">DETAILS</button>
+    <button class="btn inline info-btn-bar js-btn-more-info btn-more-info">MORE INFORMATION</button>
+    <button class="btn inline info-btn-bar js-btn-reviews">REVIEWS</button>
+  </div>
+  <div class="col-12 info-content">
     <div class="js-detail-content">
-        <h3>Details</h3>
-        <ul>
-           <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>
-           <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li> 
-           <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>  
-        </ul> 
+      <h3>Details</h3>
+      <ul>
+        <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit </li>
+        <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit </li>
+        <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit </li>
+      </ul>
     </div>
     <div class="js-more-info-content">
-       <h3>More Information</h3>
-        <ul>
-           <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>
-           <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li> 
-           <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>  
-        </ul> 
+      <h3>More Information</h3>
+      <ul>
+        <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit </li>
+        <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit </li>
+        <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit </li>
+      </ul>
     </div>
     <div class="js-review-content">
-         <h3>Reviews</h3>
-        <ul>
-           <li> <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star-outline"></span>
-            <br>
-               Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>
-           <li>
-                <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star-outline"></span>
-            <br>
-            Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li> 
-           <li>
-                <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star"></span>
-            <span aria-hidden="true" class="icon-star-outline"></span>
-            <br>
-            Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>  
-        </ul> 
-     </div>
-</div>
+      <h3>Reviews</h3>
+      <ul>
+        <li>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star-outline"></span>
+          <br> Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit </li>
+        <li>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star-outline"></span>
+          <br> Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit </li>
+        <li>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star"></span>
+          <span aria-hidden="true" class="icon-star-outline"></span>
+          <br> Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="related-products pl-3">
-<h3>Related Products</h3>
-<div class="card-section">
-<div class="card-columns cards-desktop mb-5">
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
+  <h3>Related Products</h3>
+  <div class="card-section">
+    <div class="card-columns cards-desktop mb-5">
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
       </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 <hr>
 <div class="you-may-also-like pl-3">
-    <h3>You May Also like</h3>
-    <div class="card-section">
-<div class="card-columns cards-desktop mb-5">
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
+  <h3>You May Also like</h3>
+  <div class="card-section">
+    <div class="card-columns cards-desktop mb-5">
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
       </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title mb-0">Product title 3</h5>
+          <p class="card-text mb-0">$100.00</p>
+          <div class="inline-group">
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star"></span>
+            <span aria-hidden="true" class="icon-star-outline"></span>
+          </div>
+          <div class="inline-group mt-1">
+            <button class="btn card-btn-pdp">Add to Cart</button>
+            <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
+            <span aria-hidden="true" class="icon-compare"></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{assets}}/images/CardImage3.jpg" alt="Product 3">
-    <div class="card-body">
-      <h5 class="card-title mb-0">Product title 3</h5>
-      <p class="card-text mb-0">$100.00</p>
-      <div class="inline-group">
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star"></span>
-          <span aria-hidden="true" class="icon-star-outline"></span>
-      </div>
-      <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
-      <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
-      <span aria-hidden="true" class="icon-compare"></span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 </div>

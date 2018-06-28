@@ -1,4 +1,18 @@
+
 $(function(){
+    $.validator.addMethod(
+        "validAmount", 
+        function(value, element) {
+            var $selectorValue = $("js-valid-selector").val();
+            if(value>25 && $selectorValue == null){
+                return true;
+            }
+            else {
+                return false;
+            }
+            
+        }
+    );
     $("#contact-form").validate({
         rules: {
             email:{
@@ -39,30 +53,22 @@ $(function(){
                 lettersonly: true
             },
             amount:{
-                required:true,
+                validAmount: true,
                 digits:true,
                 range:[1,1000]
-            },
-            qty:{
-                required:true,
-                digits:true,
-                range:[1,100]
             }
         },
         messages:{
             amount: {
                 required: "please enter a valid amount!",
                 digits: "Please enter digits only!",
-                range:"Please enter a value from 1 to 1000."
+                range:"Please enter an amount from 25 to 1000.",
+                validAmount: "Please enter only one amount" 
+
             },
             name:{
                 required: "please enter your name!",
                 lettersonly: "please do not enter numbers or symbols"
-            },
-            qty:{
-                required: "please enter desired amount!",
-                digits: "Please enter digits only!",
-                range:"Please enter a value from 1 to 1000."
             }
 
         }
