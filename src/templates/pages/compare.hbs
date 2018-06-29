@@ -2,7 +2,10 @@
 title: compare
 layout: src/templates/layouts/1column.hbs
 ---
-<h3 class="helvetica semi-important-font container mt-5 mb-5">Compare Products</h3>
+<div class="container compare-banner">
+<h3 class="helvetica semi-important-font container mt-5 mb-5 inline">Compare Products</h3>
+<p class="inline regular-font bold grey-color print-screen js-print">Print</p>
+</div>
 <table class="container mb-5 mt-5">
    
   <tr>
@@ -30,7 +33,7 @@ layout: src/templates/layouts/1column.hbs
         {{else}}
              <p class="price-tag-plp inline">${{this.price.regular}}.00</p>
         {{/if}}
-        <div class="inline-group mb-4">
+        <div class="inline-group mb-4 no-print">
       <button class="btn card-btn ml-1 mr-2">Add to Cart</button>
       <span aria-hidden="true" class="icon-wishlist-outline pt-1"></span>
       <span aria-hidden="true" class="icon-remove"></span>

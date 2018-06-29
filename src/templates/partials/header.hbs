@@ -1,6 +1,6 @@
 --- component: header ---
 
-<header id="masthead" class="masthead" name="masthead">
+<header id="masthead" class="masthead no-print" name="masthead">
 
     <div class="masthead-top">
         <div class="container">
@@ -35,14 +35,14 @@
                             <a class="navbar-brandx" href="/">
                                 <img src="{{assets}}/images/logo.gif" alt="{{site.title}}" class="brand" />
                             </a>
-                            <button class="navbar-toggler ml-5 mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            <button class="navbar-toggler border-0 ml-5 mt-1" type="button" data-toggle="offcanvas"  aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
                         {{!dropdown}}
-                        <div class="collapse navbar-collapse col-md-9" id="navbarSupportedContent">
-                            <ul class="navbar-nav full-container ml-4 row" id="navigation">
+                        <div class="navbar-collapse offcanvas-collapse col-md-9" id="navbarsExampleDefault">
+                            <ul class="navbar-nav full-container row" id="navigation">
                                 <li class="col-md-3 nav-item mt-1 mr-2">
                                     <div class="dropdown">
                                         <a class="nav-link browse" data-toggle="dropdown" aria-haspopup="true"

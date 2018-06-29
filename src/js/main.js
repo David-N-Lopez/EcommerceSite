@@ -13,28 +13,52 @@ Respond.to([
 ])
 //ANIMATION "BACK TO TOP"
 $(document).ready(function(){
+    //variables
+    let $detailBtn =  $(".js-btn-details");
+    let $detailContent = $(".js-detail-content");
+    let $moreInfoBtn = $(".js-btn-more-info");
+    let $moreInfoContent = $(".js-more-info-content");
+    let $reviewBtn = $(".js-btn-reviews");
+    let $reviewContent = $(".js-review-content");
+    let $printScreen = $(".js-print");
+    let $mySideNav = $("#mySideNav");
+    let $myBody = $(".main");
+    let $myFooter = $("footer");
+    let $navToggle = $(".navbar-toggler");
+    let $notFlyout = $("body").not(".offcanvas-collapse");
+    //scroll animation
     $(".js-go-up").click(function() {
         $('html, body').animate({
             scrollTop: 0
         }, 2000);
      });
-     $("js-go-to-review").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#review-form").offset.bottom
-        }, 2000);
+     $(".js-go-to-review").click(function(){
+        scrollTo("#review-form");
      });
+     //offcanvas animation
+     $(function () {
+        'use strict'
+      
+        $('[data-toggle="offcanvas"]').on('click', function () {
+          $('.offcanvas-collapse').toggleClass('open')
+        })
+        $notFlyout.on("mouseleave",function(){
+            if ( $('.offcanvas-collapse').hasClass('open')){
+                $('.offcanvas-collapse').toggleClass('open')
+            }
+        })
+    
+        
+      })
+      
+     //nav active state
     $(function() {
         $('.nav-link[href*="' + location.pathname.split("/")[1] + '"]').addClass('active-state');
       });
     $("submit-btn").submit(function(e){
         return false;
-    })
-    scrollTo(".js-go-to-review", "#review-form");
-    $(from).click(function() {
-        $('html, body').animate({
-            scrollTop: $(to).offset.top
-        }, 2000);
-     });
+    });
+    //slick slider
  $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -56,13 +80,8 @@ $(document).ready(function(){
     focusOnSelect: true
   
   });
-  
-    let $detailBtn =  $(".js-btn-details");
-    let $detailContent = $(".js-detail-content");
-    let $moreInfoBtn = $(".js-btn-more-info");
-    let $moreInfoContent = $(".js-more-info-content");
-    let $reviewBtn = $(".js-btn-reviews");
-    let $reviewContent = $(".js-review-content");
+    //PDP INFO BOX
+ 
     $detailBtn.click(function(){
         $detailBtn.addClass("active-more-info");
         $moreInfoBtn.removeClass("active-more-info");
@@ -88,13 +107,17 @@ $(document).ready(function(){
         $moreInfoContent.hide();
         $reviewContent.show();
     });
+    //Print screen
+    $printScreen.on("click",function(){
+        window.print();
+    })
+    //sidNav for mobile devices
         
 })
-  function scrollTo(from, to){
-    $(from).click(function() {
+  function scrollTo(to){
         $('html, body').animate({
-            scrollTop: $(to).offset.top
+            scrollTop:  ($(to).offset().top)
         }, 2000);
-     });
 }
+
 

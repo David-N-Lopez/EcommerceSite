@@ -1,5 +1,6 @@
 @import "utilities.less";
 @import "variable.less";
+
 .masthead-top{
     background-color: @black;
     position: relative;
@@ -78,17 +79,17 @@
     max-height: 45px;
 }
 .hide-tablet-display{
-    @media (max-width:768px){//how can I store this as functions maybe
+    @media (max-width:@tablet-max){//how can I store this as functions maybe
         display: none;
     }
 }
 .hide-phone-display{
-    @media (max-width:544px){//how can I store this as functions maybe
+    @media (max-width:@phone-max){//how can I store this as functions maybe
         display: none;
     }
 }
 .phone-display-search{
-    @media (max-width:768px){
+    @media (max-width:@tablet-max){
         .form-control{
             display:none;
         }
@@ -98,12 +99,12 @@
     }
 }
 .phone-display-left {
-    @media (max-width:544px){//how can I store this as functions maybe
+    @media (max-width:@tablet-max){//how can I store this as functions maybe
         justify-content: flex-start!important;
     }  
 }
 .phone-display-right{
-    @media (max-width:544px){//how can I store this as functions maybe
+    @media (max-width:@phone-max){//how can I store this as functions maybe
         justify-content: flex-end!important;
     }  
 }
