@@ -37,7 +37,9 @@ var helpers = {
         }
         return ret;
     },
-
+    getDataIndex: function(array, index){
+        return array[index];
+    },
     getDataAtIndex: function(categoryName, catalog, index, feature, condition, name){
         var i = 0;
         var array = [];
@@ -54,6 +56,14 @@ var helpers = {
         }
         return array[index];
     },
+    eachUpTo: function(ary, max, options){
+        if(!ary || ary.length == 0)
+        return options.inverse(this);
+        var result = [ ];
+        for(var i = 0; i < max && i < ary.length; ++i)
+            result.push(options.fn(ary[i]));
+        return result.join('');
+    },
     getDataArray: function(categoryName, catalog){
         var i = 0;
         var array = [];
@@ -65,6 +75,10 @@ var helpers = {
         }
         return array;
     },
+    lowercaseFirst: function(string){
+        var lowercaseFirstLetter = string.charAt(0).toLowerCase() + string.slice(1);
+        return lowercaseFirstLetter;
+    },
     ifEquals: function(element1, element2, feature){
         var compare = eval("element1"+"."+ feature);
         var array = [];
@@ -75,7 +89,7 @@ var helpers = {
             return array;
 
         }
-    },
+    }
     
 };
 

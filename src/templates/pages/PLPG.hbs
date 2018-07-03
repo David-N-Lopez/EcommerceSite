@@ -50,7 +50,7 @@ layout: src/templates/layouts/2column-left-plp.hbs
      <a href="../../../PDP.html">
     <div class="card card-img-side">
         {{#if this.ribbon}}
-                <h5 class="{{this.ribbon}}">{{this.ribbon}}</h5>
+                <h5 class="ribbon-{{#lowercaseFirst this.ribbon}}{{/lowercaseFirst}}">{{this.ribbon}}</h5>
             {{/if}}
         <img class="plp-img" src="../../assets/images/{{this.img}}" alt="Product1 ">
 
@@ -58,7 +58,7 @@ layout: src/templates/layouts/2column-left-plp.hbs
     </a>
     <h5 class="card-title mt-3 mb-0">{{this.name}}</h5>
       <br>
-               {{#if this.price.special}}
+        {{#if this.price.special}}
         <strike class="price-tag-plp inline">${{this.price.regular}}.00</strike>
         <p class="special-price-tag-plp inline">${{this.price.special}}.00</p>
         {{else}}

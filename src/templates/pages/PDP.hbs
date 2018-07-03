@@ -89,32 +89,41 @@ layout: src/templates/layouts/1columnWBread.hbs
 
     </div>
 </div>
-
 <div class="info-section">
-<div  class="col-6">
-<button class="btn inline info-btn-bar js-btn-details ">DETAILS</button>
-<button class="btn inline info-btn-bar js-btn-more-info btn-more-info">MORE INFORMATION</button>
-<button class="btn inline info-btn-bar js-btn-reviews active-more-info">REVIEWS</button>
+    <div class="col-6">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item pdp-li p-0 inline col-4">
+        <a class="pdp-tab active" data-toggle="tab" href="#detail" role="tab" aria-controls="menu" aria-selected="true">DETAILS</a>
+    </li>
+    <li class="nav-item pdp-li p-0 inline col-4">
+        <a class="pdp-tab"  data-toggle="tab" href="#moreInfo" role="tab" aria-controls="account" aria-selected="false">MORE INFO</a>
+    </li>
+    <li class="nav-item pdp-li p-0 inline col-4">
+        <a class=" pdp-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="account" aria-selected="false">REVIEWS</a>
+    </li>
+  
+</ul>
 </div>
-<div class="col-12 info-content">
-    <div class="js-detail-content">
-        <h3>Details</h3>
+<div class="col-12">
+ <div class="tab-content tab-content-pdp" id="myTabContent">
+    <div class="navbar-navinfo-content tab-pane show active container" id="detail" role="tabpanel" aria-labelledby="home-tab">
+       <h3>Detail</h3>
         <ul>
            <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>
            <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li> 
            <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>  
         </ul> 
-    </div>
-    <div class="js-more-info-content">
-       <h3>More Information</h3>
+        </div>
+<div class="navbar-nav info-content tab-pane container" id="moreInfo" role="tabpanel" aria-labelledby="home-tab">
+       <h3>More Info</h3>
         <ul>
            <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>
            <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li> 
            <li>Lorem ipsdunt ut labore et quis nostrud exercit ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </li>  
         </ul> 
-    </div>
-    <div class="js-review-content">
-         <h3 class="ml-4 mb-3 mt-4"><span aria-hidden="true" class="icon-star"></span>
+        </div>
+<div class="navbar-nav info-content tab-pane container" id="reviews" role="tabpanel" aria-labelledby="home-tab">
+      <h3 class="ml-4 mb-3 mt-4"><span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star"></span>
             <span aria-hidden="true" class="icon-star"></span>
@@ -164,11 +173,27 @@ layout: src/templates/layouts/1columnWBread.hbs
         </div>
         <button type="submit" class="btn submit-btn">Submit</button>
     </form>
-    </div>
-     </div>
+        </div>
+    <ul class="js-account-content account-content tab-pane no-list-style" role="tabpanel" aria-labelledby="home-tab" id="account"> 
+        <li class="bold grey-color">
+            <hr>
+            My Account
+            <hr>
+        </li>
+        <li class="bold grey-color">
+            My Wish Lists (3)
+            <hr>
+        </li>
+        <li class="bold grey-color">
+            Sign Out
+            <hr>
+        </li>
+            
+    </ul>
 </div>
 </div>
-
+</div>
+</div>
 <div class="related-products pl-3">
 <h3>Related Products</h3>
 <div class="card-section">

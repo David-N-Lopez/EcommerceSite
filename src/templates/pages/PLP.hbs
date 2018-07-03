@@ -51,7 +51,7 @@ layout: src/templates/layouts/2column-left-plp.hbs
         <div class="card card-img-side">
             {{#if this.ribbon}}
        
-                <h5 class="{{this.ribbon}}">{{this.ribbon}}</h5>
+                <h5 class="ribbon-{{#lowercaseFirst this.ribbon}}{{/lowercaseFirst}}">{{this.ribbon}}</h5>
 
             {{/if}}
   

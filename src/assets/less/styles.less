@@ -200,18 +200,12 @@ body{
     border-color: @brand-primary;
     border-radius: 50%;
     border-style: solid;
+    padding: 12px 5px 12px 5px;
+    color: @brand-primary;
+    font-size: 15px;
+}
 
-}
 .ribbon-new{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border-width: 2px;
-    border-color: green;
-    border-radius: 50%;
-    border-style: solid;
-}
-.New{
     position: absolute;
     border: 2px solid @black;
     border-radius: 50%;
@@ -221,12 +215,6 @@ body{
     color: @black;
     font-size: 15px;
    
-}
-.Sale{
-    padding: 12px 5px 12px 5px;
-    color: @brand-primary;
-    font-size: 15px;
-   .ribbon-sale;
 }
 .circle{
     height: 20px;
@@ -344,15 +332,37 @@ body{
     margin-left: -5px;
     margin-right: -5px;
 }
-.active-more-info{
-    position: relative;
-    .white-background;
-    border-bottom-width: 1px;
-    border-bottom-color: white;
+.tab-content-pdp{
+    border-style:solid;
+    border-width:1px;
+    border-color:@black;
+    background: @white;
 }
 .info-section{
     margin-top: 130px;
     margin-bottom: 110px;
+}
+
+.pdp-tab{
+    padding:.5rem 1rem;
+    background-color: lightgray;
+    display: block;
+    color:@black;
+    border:1px solid @black;
+}
+.pdp-tab:hover{
+    color:inherit;
+}
+.pdp-li > .active{
+    background-color: @white;
+    border-bottom-width: 2px;
+    border-bottom-color: @white;
+    margin-bottom: 0px;
+}
+.nav-tabs{
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 2;
 }
 .card-btn-pdp{
     .card-btn;
@@ -364,11 +374,6 @@ body{
 .gorilla-card-img{
     height: 300px;
     width: max-content;
-}
-.error{
-    color: red;
-    font-size: 10px;
-
 }
 .input-field{
     line-height: 2.5;
@@ -398,19 +403,29 @@ body{
   }
   
   .selectdiv:after {
-      content: '\f078';
-      font: normal normal normal 14px/1 FontAwesome;
-      color: @black;
-      right: 11px;
-      top: 0;
-      bottom: 0;
-      height: 53px;
-      padding: 20px 0px 0px 8px;
-      border-left: 1px solid @black;
-      position: absolute;
-      pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 25px;
+    right:13px;
+    vertical-align: 4px;
+    content: "";
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    border-left: 5px solid transparent;
+    color: @black;
+    
+
   }
-  
+  .selectdiv:before{
+      content: "";
+      position: absolute;
+      right: 36px;
+      border-left: 1px solid @black;
+      height:53px;
+
+  }
   /* IE11 hide native button (thanks Matt!) */
   select::-ms-expand {
   display: none;
