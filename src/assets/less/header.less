@@ -4,48 +4,50 @@
 .masthead-top{
     background-color: @black;
     position: relative;
-    font-family:@brand-font;
+    font-family: @brand-font;
     font-weight: 200;
     font-size: 13px
 }
 .dropdown-menu-masthead{
-    background-color:@black;
-    font-family:@brand-font;
+    background-color: @black;
+    font-family: @brand-font;
     font-weight: 200;
-    font-size:13px;
-    border:none;
+    font-size: 13px;
+    border: none;
 }
 .dropdown-menu{
-    border-right-width:0px;
+    border-right-width: 0px;
 
 }
 .navbar-hidden-tablet > .active-state:after{
     content: "-";
     position: absolute;
     color: @brand-primary;
-    top:15px;
-    left:45%;
+    top: 15px;
+    left: 45%;
     font-size: 50px;
 }
 .browse::after{
+    @media(max-width: @tablet-max){
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 5em;
-    vertical-align: .255em;
+    margin-left: 80px;
+    vertical-align: 4px;
     content: "";
-    border-top: .3em solid;
-    border-right: .3em solid transparent;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
     border-bottom: 0;
-    border-left: .3em solid transparent;
+    border-left: 5px solid transparent;
+}
 }
 .navbar-hidden-tablet > .nav-link:hover{
    &:after{
     content: "-";
     position: absolute;
     color: @brand-primary;
-    top:15px;
-    left:45%;
+    top: 15px;
+    left: 45%;
     font-size: 50px;
    }
 }
@@ -54,13 +56,13 @@
 }
 .nav-item{
     font-weight: bold;
-    color:@black;
+    color: @black;
 }
 .brand{
     max-width: 170px;
 }
 .navbar-brandx{
-    float:right;
+    float: right;
 }
 .full-container{
     width: 100%;
@@ -78,7 +80,7 @@
     max-height: 60px;
     border-style: solid;
     border-width: 1px;
-    border-color:lightgrey;
+    border-color: lightgrey;
     border-left: @white;
 }
 .input-group{
@@ -88,7 +90,7 @@
     display: inline-block;
 }
 .form-control{
-    border-right-width:0px;
+    border-right-width: 0px;
 }
 .small-icon{
     max-width: 45px;
@@ -98,64 +100,47 @@
 .head-search{
     margin-left: -20px;
 }
-.hide-tablet-display{
-    @media (max-width:@tablet-max){//how can I store this as functions maybe
-        display: none;
-    }
-}
+
 .hide-phone-display{
-    @media (max-width:@phone-max){//how can I store this as functions maybe
+    @media (max-width: @phone-max){//how can I store this as functions maybe
         display: none;
     }
 }
 .phone-display-search{
-    @media (max-width:@tablet-max){
+    @media (max-width: @tablet-max){
         .form-control{
-            display:none;
+            display: none;
         }
         .inputGroup-sizing-default{
-            border-width:0px;
+            border-width: 0px;
         }
     }
 }
 .phone-display-left {
-    @media (max-width:@tablet-max){//how can I store this as functions maybe
+    @media (max-width: @tablet-max){//how can I store this as functions maybe
         justify-content: flex-start!important;
     }  
 }
 .phone-display-right{
-    @media (max-width:@phone-max){//how can I store this as functions maybe
+    @media (max-width: @phone-max){//how can I store this as functions maybe
         justify-content: flex-end!important;
     }  
 }
 //OFFCANVAS
-#navbarsExampleDefault{
-    padding: 0;
-}
 .head-buttons{
-    width:50%;
+    width: 50%;
     height: 50px;
     background-color: lightgray;
     font-weight: bold;
-    font-size:16px;
+    font-size: 16px;
     border-style: solid;
-    border-width:0.5px;
+    border-width: 0.5px;
     border-color: @grey;
-    border-top-width:0px;
+    border-top-width: 0px;
 
 }
-.navbar-hidden-tablet{
-    @media (max-width: @tablet-max){
-        display: none!important;
-    }
-}
-#navbarsExampleDefault{
-    @media (min-width: @tablet-max){
-        display: none!important;
-    }
-}
-#navbarsExampleDefault.active{
-    border-width:0;
+.offcanvas-collapse.active{
+    border-width: 0;
     background-color: @white;
 }
 .head-buttons > .nav-link.active{
@@ -163,23 +148,6 @@
 }
 .head-buttons > a{
     color: @black;
-}
-.head-account{
-    width:50%;
-    margin-left:-5px;
-    @media (min-width: @tablet-max){
-        display: none;
-    }
-}
-.head-menu{
-    @media (min-width: @tablet-max){
-        display: none;
-    }
-}
-#myTab{
-    @media (min-width: @tablet-max){
-        display: none;
-    }
 }
 @media (max-width: @tablet-max) {
     .offcanvas-collapse {
