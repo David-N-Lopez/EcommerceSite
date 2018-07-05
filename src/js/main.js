@@ -84,33 +84,6 @@ $(document).ready(function(){
     focusOnSelect: true
   
   });
-    //PDP INFO BOX
- 
-    $detailBtn.click(function(){
-        $detailBtn.addClass("active-more-info");
-        $moreInfoBtn.removeClass("active-more-info");
-        $reviewBtn.removeClass("active-more-info");
-        $detailContent.show();
-        $moreInfoContent.hide();
-        $reviewContent.hide();
-
-    });
-    $moreInfoBtn.click(function(){
-        $detailBtn.removeClass("active-more-info");
-        $moreInfoBtn.addClass("active-more-info");
-        $reviewBtn.removeClass("active-more-info");
-        $detailContent.hide();
-        $moreInfoContent.show();
-        $reviewContent.hide();
-    });
-    $reviewBtn.click(function(){
-        $detailBtn.removeClass("active-more-info");
-        $moreInfoBtn.removeClass("active-more-info");
-        $reviewBtn.addClass("active-more-info");
-        $detailContent.hide();
-        $moreInfoContent.hide();
-        $reviewContent.show();
-    });
     //Print screen
     $printScreen.on("click",function(){
         window.print();
