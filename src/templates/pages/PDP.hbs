@@ -2,7 +2,7 @@
 title: Home 
 layout: src/templates/layouts/1columnWBread.hbs
 ---
-
+<div id="cart">
 <div class="row mb-3">
     <div class="col-6 flex">
         <div class="slider-for">
@@ -66,7 +66,7 @@ layout: src/templates/layouts/1columnWBread.hbs
         {{/if}}
         <br>
          <input type="number" name="qty" class="inline qty-input" placeholder="qty.">
-        <button type="submit" class="btn add-to-cart-btn m-2 inline">Add to Cart</button>
+         <add-to-cart name="{{site.catalog.0.name}}" price ="{{site.catalog.0.price.regular}}" @add = "newItem"></add-to-cart>
         <br>
         <button type="submit" class="btn checkout-btn">Checkout with PayPal</button>
         <hr>
@@ -86,7 +86,6 @@ layout: src/templates/layouts/1columnWBread.hbs
         </div>
          
     </div>
-
     </div>
 </div>
 <div class="info-section">
@@ -101,7 +100,6 @@ layout: src/templates/layouts/1columnWBread.hbs
     <li class="nav-item pdp-li p-0 inline col-4">
         <a class=" pdp-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="account" aria-selected="false">REVIEWS</a>
     </li>
-  
 </ul>
 </div>
 <div class="col-12">
@@ -188,7 +186,7 @@ layout: src/templates/layouts/1columnWBread.hbs
             Sign Out
             <hr>
         </li>
-            
+        
     </ul>
 </div>
 </div>
@@ -250,4 +248,17 @@ layout: src/templates/layouts/1columnWBread.hbs
      {{/eachUpTo}}
 </div>
 </div>
+</div>
+    <div class="black-border mini-cart fixed-top container" v-if= "miniCartVisible">
+          <h4 class="mini-cart-title white-color">VIEW AND EDIT CART</h4>
+          <hr>
+          <div class="inline mini-cart-info-1 white-color bold">1 ITEM</div>
+          <div class="inline mini-cart-info-2 white-color">Card Subtotal:</div>
+          <div class="inline mini-cart-info-3 white-color bold">$15.50</div>
+          <hr>
+            <mini-cart-item v-for="item in miniCartArray" name = '{{item}}' price = '{{item.price}}' image = '{{item.image}}'></mini-cart-item>
+                  <p class="bold white-color">QTY</p>
+           <button class="mini-cart-button-orange">go to checkout</button>
+           <button class="mini-cart-button-grey">go to checkout</button>
+    </div> 
 </div>

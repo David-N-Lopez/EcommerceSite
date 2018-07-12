@@ -3,7 +3,6 @@ component: header
 ---
 
 <header id="masthead" class="masthead no-print" name="masthead">
-
     <div class="masthead-top">
         <div class="container">
             <div class="row justify-content-end hide-phone-display">
@@ -43,7 +42,7 @@ component: header
                             </button>
                         </div>
                         {{!dropdown}}
-                        <div class="col-md-9 inherit-md d-none d-md-block">
+                        <div class="col-md-9 inherit-md d-none d-md-block ">
                         <ul class="navbar-nav full-container row" aria-labelledby="home-tab">
                                 <li class="col-md-3 nav-item mt-1 mr-2 inline">
                                     
@@ -59,7 +58,6 @@ component: header
                                             <button class="dropdown-item" type="button"><a href="../../../PDPGC.html" class="dropdown-item">Buy a gift card</a></button>
                                         </div>
                                     </div>
-                                    
                                 </li>
                                 <li class="col-md-3 nav-item mt-1 mr-2 inline">
                                     <a class="nav-link about" href="../../../aboutUs.html">About</a>
@@ -139,9 +137,11 @@ component: header
                             </div>
                         </div>
                         {{!cart}}
-                        <a class="col-md-3 mt-3 pt-1 col-6" href="#wish" aria-label="wish list">
+                        
+                        <a class="col-md-3 mt-3 pt-1 col-6" @click = "show = true" aria-label="wish list">
                             <img class="small-icon" src="{{assets}}/images/shopping_cart.png" />
                         </a>
+                        
                     </div>
                 </div>
             </div>
@@ -150,3 +150,4 @@ component: header
     </div>
     </div>
 </header>
+       
