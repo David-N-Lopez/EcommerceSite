@@ -66,7 +66,7 @@ layout: src/templates/layouts/1columnWBread.hbs
         {{/if}}
         <br>
          <input type="number" name="qty" class="inline qty-input" placeholder="qty.">
-         <add-to-cart name="{{site.catalog.0.name}}" price ="{{site.catalog.0.price.regular}}" @add = "newItem"></add-to-cart>
+         <add-to-cart name="{{site.catalog.0.name}}" price ="{{site.catalog.0.price.regular}}" image = "../../assets/images/{{site.catalog.0.img}}" @add = "newItem"></add-to-cart>
         <br>
         <button type="submit" class="btn checkout-btn">Checkout with PayPal</button>
         <hr>
@@ -210,7 +210,7 @@ layout: src/templates/layouts/1columnWBread.hbs
           <span aria-hidden="true" class="icon-star-outline"></span>
       </div>
       <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
+      <add-to-cart-small name="{{this.name}}" price ="{{this.price.regular}}"image = "../../assets/images/{{this.img}}" @add = "newItem"></add-to-cart-small>
       <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
       <span aria-hidden="true" class="icon-compare"></span>
       </div>
@@ -239,7 +239,7 @@ layout: src/templates/layouts/1columnWBread.hbs
           <span aria-hidden="true" class="icon-star-outline"></span>
       </div>
       <div class="inline-group mt-1">
-      <button class="btn card-btn-pdp">Add to Cart</button>
+      <add-to-cart-small name="{{this.name}}" price ="{{this.price.regular}}" image = "../../assets/images/{{this.img}}" @add = "newItem"></add-to-cart-small>
       <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
       <span aria-hidden="true" class="icon-compare"></span>
       </div>
@@ -250,15 +250,20 @@ layout: src/templates/layouts/1columnWBread.hbs
 </div>
 </div>
     <div class="black-border mini-cart fixed-top container" v-if= "miniCartVisible">
-          <h4 class="mini-cart-title white-color">VIEW AND EDIT CART</h4>
+        <div class="pt-4 pr-4">
+            <h4 class="mini-cart-title white-color inline">VIEW AND EDIT CART</h4>
+            <p class="inline white-color inline ft-right" @click = 'miniCartVisible = !miniCartVisible'>X</p>
+        </div>    
           <hr>
-          <div class="inline mini-cart-info-1 white-color bold">1 ITEM</div>
-          <div class="inline mini-cart-info-2 white-color">Card Subtotal:</div>
-          <div class="inline mini-cart-info-3 white-color bold">$15.50</div>
+          <div class="inline mini-cart-info-1 white-color bold":totalAmount="totalAmount" v-text ="totalAmount" ></div>
+          <div class="inline mini-cart-info-1 white-color bold">Items</div>
+          <div class="inline ft-right pr-5"> 
+              <div class="inline mini-cart-info-2 white-color">Card Subtotal: $</div>
+              <div class="inline mini-cart-info-3 white-color bold" :miniCartSubtotal= "miniCartSubtotal" v-text="miniCartSubtotal"></div>
+          </div>
           <hr>
-            <mini-cart-item v-for="item in miniCartArray" name = '{{item}}' price = '{{item.price}}' image = '{{item.image}}'></mini-cart-item>
-                  <p class="bold white-color">QTY</p>
-           <button class="mini-cart-button-orange">go to checkout</button>
-           <button class="mini-cart-button-grey">go to checkout</button>
+            <mini-cart-item v-for='item in miniCartArray.slice(0,4)' :_name = "item.names" :_price = "item.prices" :_image = "item.images" :_qty = "item.qtys"></mini-cart-item>
+           <button class="mini-cart-button-orange">proceed to checkout</button>
+           <button class="mini-cart-button-grey mb-3">checkout with paypal</button>
     </div> 
 </div>

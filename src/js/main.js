@@ -89,6 +89,15 @@ $(document).ready(function(){
         window.print();
     })
     //sidNav for mobile devices
+    var $bodyTop = $('header');
+  
+    $(window).scroll(function(){
+        if (window.scrollY > ($bodyTop.offset().top + $bodyTop.height())) {
+            alert("You've scrolled past the second div");
+        }
+       
+     
+    });
         
 })
   function scrollTo(to){
