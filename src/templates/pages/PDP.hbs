@@ -3,7 +3,11 @@ title: Home
 layout: src/templates/layouts/1columnWBread.hbs
 ---
 <div id="cart">
-<div class="row mb-3">
+        <div class="fixedCart" @click = 'miniCartVisible = !miniCartVisible'>
+        <div class="orangeCircle" ><p :totalAmount="totalAmount" v-text ="totalAmount" class="white-color bold cartNumber"></p></div>
+            <img class = "cart-image" src = "{{assets}}/images/cartCircle.png"/>
+    </div>
+<div class="row mb-3 main-pdp">
     <div class="col-6 flex">
         <div class="slider-for">
 	<div class="slider-item">
@@ -262,8 +266,11 @@ layout: src/templates/layouts/1columnWBread.hbs
               <div class="inline mini-cart-info-3 white-color bold" :miniCartSubtotal= "miniCartSubtotal" v-text="miniCartSubtotal"></div>
           </div>
           <hr>
-            <mini-cart-item v-for='item in miniCartArray.slice(0,4)' :_name = "item.names" :_price = "item.prices" :_image = "item.images" :_qty = "item.qtys"></mini-cart-item>
-           <button class="mini-cart-button-orange">proceed to checkout</button>
-           <button class="mini-cart-button-grey mb-3">checkout with paypal</button>
+            <div class="scroll-view">
+            <mini-cart-item v-for='item in miniCartArray' :_name = "item.names" :_price = "item.prices" :_image = "item.images" :_qty = "item.qtys" :_obj ="item" ></mini-cart-item>
+            </div>
+           <button class="mini-cart-button-orange white-color">proceed to checkout</button>
+           <button class="mini-cart-button-grey mb-3 white-color">checkout with paypal</button>
     </div> 
+    
 </div>

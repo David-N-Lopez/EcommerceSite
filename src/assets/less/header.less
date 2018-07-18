@@ -174,11 +174,24 @@
     }
   }
   .mini-cart{
-      margin-top:100px;
-      margin-left: 60%;
+      margin-top:262px;
+      margin-left: 53%;
       background-color: rgba(0,0,0,0.9);
       width:500px;
       z-index: 3000;
+  }
+  .mini-cart::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 180px;
+    right:-10px;
+    vertical-align: 4px;
+    content: "";
+    border-top: 28px solid;
+    border-right: 10px solid transparent;
+    border-bottom: 0;
+    color: rgba(0,0,0,0.9);;
   }
   .mini-cart-img{
       width: 80px;
@@ -189,6 +202,7 @@
     background-color: @brand-primary;
     height: 60px;
     width:100%;
+    border:none;
 }
 .mini-cart-button-grey{
     display: block;
@@ -196,5 +210,6 @@
     height: 60px;
     width:100%;   
     margin-top:10px;
+    border:none;
 }
 

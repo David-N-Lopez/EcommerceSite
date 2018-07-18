@@ -1,3 +1,6 @@
+window.Event = new Vue();
+
+
 Vue.component('add-to-cart', {
  
     props: ['name', 'price','image'],
@@ -20,7 +23,7 @@ Vue.component('add-to-cart-small', {
     } 
 });
 Vue.component('mini-cart-item',{
-    props: ['_name', '_price','_image', '_qty'],
+    props: ['_name', '_price','_image', '_qty', '_obj'],
     template: `
     <div class="row mb-2"> 
     <div class="col-3">
@@ -34,8 +37,13 @@ Vue.component('mini-cart-item',{
         <p class="inline white-color">{{_qty}}</p>
         </div>
     </div>
-    <div class="col-3 ta-right ml-0"><a class="inline white-color mini-cart-exit bold">X</a></div>
-     </div>`
+    <div class="col-3 ta-right ml-0"><a class="inline white-color mini-cart-exit bold" @click = 'remove(_obj)' >X</a></div>
+     </div>`,
+     methods:{
+        remove (value){
+            Event.$emit('removeItems', value);
+         }
+     }
 })
 var app = new Vue({
     el: '#cart',
@@ -43,9 +51,10 @@ var app = new Vue({
         miniCartVisible: false,
         miniCartArray: [],
         miniCartSubtotal:0,
-        totalAmount:0
+        totalAmount:0,
+        scrollPosition:0
     },
-    methods:{
+    methods: {
         newItem(value) {
             let allow = true;
             let index = 0;
@@ -62,10 +71,40 @@ var app = new Vue({
             if (allow == true) {
             this.miniCartArray.unshift(value)
             this.miniCartSubtotal += parseInt(value.prices)
+            value.index = array.length;
             this.totalAmount += 1;
+            if (array.length > 3){
+                var $scrollView = $('.scroll-view');
+                $scrollView.addClass('mini-cart-scroll');
+            }
             } 
             this.miniCartVisible = true
            setTimeout(()=> {this.miniCartVisible = false}, 100000);
         }
+    },
+    created:function(){
+        var _self = this;
+        
+        Event.$on('removeItems', function(value){
+            if (value.qtys > 1) {
+                _self.miniCartArray[value.index].qtys-= 1;
+                _self.totalAmount -=1;
+                _self.miniCartSubtotal -= parseInt(value.prices)
+            //   alert(_self.miniCartArray[value.index].qtys)
+            }
+            if(_self.miniCartArray.length == 1 ){
+                _self.miniCartArray = []
+                _self.totalAmount -=1;
+                _self.miniCartSubtotal -= parseInt(value.prices)
+            }
+             else {
+                _self.miniCartArray.splice(value.index,1); 
+                _self.totalAmount-=1;
+                _self.miniCartSubtotal -= parseInt(value.prices)
+            }
+           
+        });
     }
+    
+
 })

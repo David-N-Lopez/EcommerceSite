@@ -90,15 +90,15 @@ $(document).ready(function(){
     })
     //sidNav for mobile devices
     var $bodyTop = $('header');
-  
+    var $fixedCart = $(".fixedCart");
     $(window).scroll(function(){
         if (window.scrollY > ($bodyTop.offset().top + $bodyTop.height())) {
-            alert("You've scrolled past the second div");
+            $fixedCart.show();
         }
-       
-     
+        else{
+            $fixedCart.hide();
+        }
     });
-        
 })
   function scrollTo(to){
         $('html, body').animate({
