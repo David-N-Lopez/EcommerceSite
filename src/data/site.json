@@ -10,92 +10,92 @@
                                                             "attribute 03",
                                                             "attribute 04"]},
                                     {
-                                    "attributeCategory":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attributeCategory":["attribute 05",
+                                                                "attribute 06",
+                                                                "attribute 07",
+                                                                "attribute 08"]},
                                     {
-                                    "attributeCategory":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attributeCategory":["attribute 08",
+                                                                "attribute 10",
+                                                                "attribute 11",
+                                                                "attribute 12"]},
                                     {
-                                    "attributeCategory":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]} ]},
+                                    "attributeCategory":["attribute 13",
+                                                                "attribute 14",
+                                                                "attribute 15",
+                                                                "attribute 16"]} ]},
             "results" : 6,
             "url" : "/filter/subcategory/1"
         },{
-            "subcategory" : {"Subcategory 2":[
+            "subcategory" : {"Subcategory02":[
                                     {
                                     "attribute Category 01":["attribute 01",
                                                             "attribute 02",
                                                             "attribute 03",
                                                             "attribute 04"]},
                                     {
-                                    "attribute Category 02":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attribute Category 02":["attribute 05",
+                                                                "attribute 06",
+                                                                "attribute 07",
+                                                                "attribute 08"]},
                                     {
-                                    "attribute Category 03":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attribute Category 03":["attribute 09",
+                                                                "attribute 10",
+                                                                "attribute 11",
+                                                                "attribute 12"]},
                                     {
-                                    "attribute Category 04":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]}  ]},
+                                    "attribute Category 04":["attribute 13",
+                                                                "attribute 14",
+                                                                "attribute 15",
+                                                                "attribute 16"]}  ]},
             "results" : 3,
             "url" : "/filter/subcategory/2"
         },{
-            "subcategory" : {"Subcategory 3":[
+            "subcategory" : {"Subcategory03":[
                                     {
                                     "attribute Category 01":["attribute 01",
                                                             "attribute 02",
                                                             "attribute 03",
                                                             "attribute 04"]},
                                     {
-                                    "attribute Category 02":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attribute Category 02":["attribute 05",
+                                                                "attribute 06",
+                                                                "attribute 07",
+                                                                "attribute 08"]},
                                     {
-                                    "attribute Category 03":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attribute Category 03":["attribute 09",
+                                                                "attribute 10",
+                                                                "attribute 11",
+                                                                "attribute 12"]},
                                     {
-                                    "attribute Category 04":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]}  ]},
+                                    "attribute Category 04":["attribute 13",
+                                                                "attribute 14",
+                                                                "attribute 15",
+                                                                "attribute 16"]}  ]},
             "results" : 6,
             "url" : "/filter/subcategory/3"
         },{
-            "subcategory" : {"Subcategory 4":[
-                                    {
+            "subcategory" : {"Subcategory04":[ {
                                     "attribute Category 01":["attribute 01",
                                                             "attribute 02",
                                                             "attribute 03",
                                                             "attribute 04"]},
                                     {
-                                    "attribute Category 02":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attribute Category 02":["attribute 05",
+                                                                "attribute 06",
+                                                                "attribute 07",
+                                                                "attribute 08"]},
                                     {
-                                    "attribute Category 03":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]},
+                                    "attribute Category 03":["attribute 09",
+                                                                "attribute 10",
+                                                                "attribute 11",
+                                                                "attribute 12"]},
                                     {
-                                    "attribute Category 04":["attribute 01",
-                                                                "attribute 02",
-                                                                "attribute 03",
-                                                                "attribute 04"]}]},
+                                    "attribute Category 04":["attribute 13",
+                                                                "attribute 14",
+                                                                "attribute 15",
+                                                                "attribute 16"]} 
+                                   ]},
             "results" : 4,
             "url" : "/filter/subcategory/4"
         }]
@@ -106,15 +106,15 @@
             "results" : 3,
             "url" : "/filter/subcategory/1"
         },{
-            "subcategory" : "Subcategory 2",
+            "subcategory" : "Subcategory02",
             "results" : 5,
             "url" : "/filter/subcategory/2"
         },{
-            "subcategory" : "Subcategory 3",
+            "subcategory" : "Subcategory03",
             "results" : 3,
             "url" : "/filter/subcategory/3"
         },{
-            "subcategory" : "Subcategory 4",
+            "subcategory" : "Subcategory04",
             "results" : 4,
             "url" : "/filter/subcategory/4"
         }]
@@ -146,14 +146,14 @@
         "category":"Category Name 01",
         "subcategory": [{"Subcategory01":
                             [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                            {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                            {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                            {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
-                       {"Subcategory 2":
-                            [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                            {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                            {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                            {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+                            {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                            {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                            {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+                       {"Subcategory02":
+                        [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                        {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                        {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                        {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
         "id": "761",
         "promo": true,
         "sku": "14WPN7BW",
@@ -192,16 +192,16 @@
         {
             "name": "Product Title 02",
             "category":"Category Name 02",
-            "subcategory": [{"Subcategory 3":
+            "subcategory": [{"Subcategory03":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
-                            {"Subcategory 2":
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+                            {"Subcategory02":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "762",
             "promo":true,
             "sku": "14WPN7BR",
@@ -240,14 +240,14 @@
             "category":"Category Name 01",
             "subcategory": [{"Subcategory01":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
-                            {"Subcategory 2":
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13",null,"attribute 15",null]}]},
+                            {"Subcategory02":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+                            {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                            {"attribute Category 03":["attribute 09",null,"attribute 11","attribute 12"]},
+                            {"attribute Category 04":[null,"attribute 14","attribute 15",null]}]}],
             "id": "775",
             "promo":false,
             "sku": "13HCS7J",
@@ -285,16 +285,16 @@
         {
             "name": "Product Title 04",
             "category":"Category Name 02",
-            "subcategory": [{"Subcategory 4":
+            "subcategory": [{"Subcategory04":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
-                            {"Subcategory 2":
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+                            {"Subcategory02":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":[null,"attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "776",
             "promo": false,
             "sku": "13HCS7EL",
@@ -331,16 +331,16 @@
         {
             "name": "Product Title 05",
             "category":"Category Name 02",
-            "subcategory": [{"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory 2":
+            "subcategory": [{"Subcategory03":
                                 [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+                            {"Subcategory02":
+                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "777",
             "promo": true,
             "sku": "13HCS7CR",
@@ -378,21 +378,16 @@
         {
             "name": "Product Title 06",
             "category":"Category Name 01",
-            "subcategory": [{"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
-                            {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory": [{"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
@@ -430,21 +425,16 @@
         {
             "name": "Product Title 07",
             "category":"Category Name 01",
-            "subcategory":[{"Subcategory 2":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01","attribute 02","attribute 03",null]}]},
-                            {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
@@ -481,16 +471,16 @@
         {
             "name": "Product Title 08",
             "category":"Category Name 01",
-            "subcategory":[{"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":false,
             "sku": "13HCS7B",
@@ -528,11 +518,16 @@
         {
             "name": "Product Title 09",
             "category":"Category Name 01",
-            "subcategory":[ {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory04":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":false,
             "sku": "13HCS7B",
@@ -569,16 +564,16 @@
         {
             "name": "Product Title 10",
             "category":"Category Name 01",
-            "subcategory":[{"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory01":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
@@ -616,11 +611,16 @@
         {
             "name": "Product Title 11",
             "category":"Category Name 01",
-            "subcategory": [ {"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory": [{"Subcategory04":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
@@ -657,11 +657,16 @@
         {
             "name": "Product Title 12",
             "category":"Category Name 01",
-            "subcategory":[  {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory01":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory04":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":false,
             "sku": "13HCS7B",
@@ -698,16 +703,16 @@
         {
             "name": "Product Title 13",
             "category":"Category Name 01",
-            "subcategory":[{"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "778",
             "promo":true,
             "sku": "13HCS7B",
@@ -744,16 +749,16 @@
         {
             "name": "Product Title 14",
             "category":"Category Name 02",
-            "subcategory":[{"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory01":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "801",
             "promo":true,
             "sku": "14WPN7TC",
@@ -790,11 +795,16 @@
         {
             "name": "Product Title 15",
             "category":"Category Name 02",
-            "subcategory":[ {"Subcategory 3":
-                                    [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                    {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                    {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                    {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory04":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "802",
             "promo":true,
             "sku": "14WPN7RC",
@@ -831,16 +841,16 @@
         {
             "name": "Product Title 16",
             "category":"Category Name 02",
-            "subcategory":[{"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory":[{"Subcategory01":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "806",
             "promo":true,
             "sku": "14WPN7SV",
@@ -877,16 +887,16 @@
         {
             "name": "Product Title 17",
             "category":"Category Name 02",
-            "subcategory": [{"Subcategory 4":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory 3":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory": [{"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory04":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "809",
             "promo":true,
             "sku": "14WPN7PE",
@@ -923,16 +933,16 @@
         {
             "name": "Product Title 18",
             "category":"Category Name 02",
-            "subcategory": [{"Subcategory01":
-                                [{"attribute Category 01":["attribute 01","attribute 02","attribute 03",null]},
-                                {"attribute Category 02":[null,null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]},
-                            {"Subcategory 2":
-                                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
-                                {"attribute Category 02":["attribute 01",null,"attribute 03","attribute 04"]},
-                                {"attribute Category 03":["attribute 01","attribute 02","attribute 03","attribute 04"]},
-                                {"attribute Category 04":["attribute 01",null,"attribute 03",null]}]}],
+            "subcategory": [{"Subcategory02":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]},
+            {"Subcategory03":
+                [{"attribute Category 01":["attribute 01","attribute 02",null,null]},
+                {"attribute Category 02":[null,null,"attribute 05","attribute 06"]},
+                {"attribute Category 03":["attribute 09","attribute 10","attribute 11","attribute 12"]},
+                {"attribute Category 04":["attribute 13","attribute 14","attribute 15",null]}]}],
             "id": "837",
             "sku": "14WPN7BJ",
             "price": {

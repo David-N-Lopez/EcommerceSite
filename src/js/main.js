@@ -97,8 +97,19 @@ $(document).ready(function(){
         }
         else{
             $fixedCart.hide();
+         
         }
     });
+    $(".attribute-link").on('click', function(e){
+        let targetElementText = e.currentTarget.innerHTML
+        $.getJSON("../data/site.json", function (data) {
+            let catalog = data.catalog
+            console.log(catalog)
+            console.log(catalog[0].subcategory)
+        });
+
+    })
+
 })
   function scrollTo(to){
         $('html, body').animate({

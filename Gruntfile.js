@@ -110,6 +110,7 @@ module.exports = function (grunt) {
 				'watch:images',
 				'watch:assemble',
 				'watch:livereload',
+				'watch:data',
 				'connect:server'
 			]
 		},
@@ -152,6 +153,12 @@ module.exports = function (grunt) {
 				cwd: '<%= config.src %>/assets/images',
 				src: '**/*',
 				dest: '<%= config.build %>/assets/images'
+			},
+			data: {
+				expand: true,
+				cwd: '<%= config.src %>/data',
+				src: '**/*',
+				dest: '<%= config.build %>/data'
 			},
             deploy: {
                 expand: true,
@@ -255,6 +262,9 @@ module.exports = function (grunt) {
 				files: ['<%= config.src %>/assets/fonts/**/*'],
 				tasks: ['newer:copy:fonts']
 			},
+			data: {
+				files: ['<%= config.src %>/data/**/*'],
+			},
 			js: {
 				files: [
 					'Gruntfile.js',
@@ -327,6 +337,7 @@ module.exports = function (grunt) {
 		'copy:images',
         'copy:fonts',
 		'copy:css',
+		'copy:data',
 
 		'assemble'
 	]);
@@ -371,7 +382,8 @@ module.exports = function (grunt) {
         // copy imagery over during builds
         'copy:images',
         'copy:fonts',
-        'copy:css',
+		'copy:css',
+		'copy:data',
 
         'assemble',
 
