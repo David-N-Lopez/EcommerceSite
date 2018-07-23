@@ -100,16 +100,172 @@ $(document).ready(function(){
          
         }
     });
-    $(".attribute-link").on('click', function(e){
+    //gift card message toggle
+    let $arrow = $('.down-arrow');
+    let $giftMessage = $('.js-gift-toggle');
+    $arrow.on('click',function(){
+        if ($giftMessage.is(':hidden')){
+            $giftMessage.slideDown()
+        }
+        else{
+            $giftMessage.slideUp()
+        }
+      
+    })
+    //get cookie
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    var getCookiesKeys = function(){
+        var pairs = document.cookie.split(";");
+        var cookies = [];
+        for (var i=0; i<pairs.length; i++){
+          var pair = pairs[i].split("=");
+          cookies.push(pair[0])
+        //   cookies[(pair[0]+'').trim()] = unescape(pair[1]);
+        }
+        return cookies;
+      }
+      var getCookiesObj = function(){
+        var pairs = document.cookie.split(";");
+        var cookies = [];
+        for (var i=0; i<pairs.length; i++){
+          var pair = pairs[i].split("=");
+          cookies[(pair[0]+'').trim()] = unescape(pair[1]);
+        }
+        return cookies;
+      }
+    //Cache data 
+    let $addToCart = $(".add-to-cart")
+    $addToCart.on('click', function(e){
+        let productName = e.currentTarget.title
+        if (getCookie(productName) != ''){
+            let i = parseInt(getCookie(productName));
+            i++;
+            document.cookie = productName+'='+i.toString();
+        }
+        else{
+            document.cookie = productName+'=1'
+        }
+        
+    })
+    //cart
+    let cookiesObj = getCookiesObj();
+    let cookiesArray = getCookiesKeys();
+    fetch('../data/site.json')
+    .then(response => response.json())
+    .then(jsonResponse => 
+        {   
+            let qtys = 0;
+            let catalog = jsonResponse.catalog;
+            let allCartProducts = getProductsWithName(catalog, cookiesArray);
+            allCartProducts.map(obj =>{
+                let imgDir = "../../assets/images/" + obj.img
+                return obj.img = imgDir
+            })
+            allCartProducts.map(obj=>{
+                let itemName = obj.name;
+                qtys = cookiesObj[itemName];
+                return obj.qty = qtys
+            })
+            carts.cartItems = allCartProducts
+        }
+    )
+    function getProductsWithName(obj,name){
+        let objectArray = [];
+        obj.forEach(product=>{
+            name.forEach(indName => {  
+                if(indName.slice(-2) == product.name.slice(-2)){
+                    objectArray.push(product);
+                }
+            })
+        })
+        return objectArray;
+    }
+    //filter
+    let attributeLink = document.getElementsByClassName("attribute-link");
+    for (var i = 0; i < attributeLink.length; i++){
+        attributeLink[i].addEventListener('click', function(e){
         let targetElementText = e.currentTarget.innerHTML
-        $.getJSON("../data/site.json", function (data) {
-            let catalog = data.catalog
-            console.log(catalog)
-            console.log(catalog[0].subcategory)
+        fetch('../data/site.json')
+        .then(response => response.json())
+        .then(jsonResponse => 
+            {
+            let catalog = jsonResponse.catalog
+            let productsWithAttribute = getProductWithAttributes(catalog, 'Subcategory01',targetElementText);
+            let productClassArray = [];
+            productsWithAttribute.forEach((name)=>{
+                productClassArray.push(name.slice(-2));
+            })
+            console.log(productClassArray)
+            $('.js-product-card').hide();
+            productClassArray.forEach(classValue => {
+                if($('.js-product-card').hasClass(classValue)){
+                    console.log("going to show"+ classValue);
+                    $('.'+ classValue).show();
+                }
+            })
+    
         });
 
-    })
-
+        function getProductWithAttributes(obj,subcatName, desired)
+            {
+            let parsedArray = []
+            obj.forEach(product => {
+                // console.log(product);
+                product.subcategory.forEach(subcategoryName =>{
+                    // console.log(subcategoryName)
+                    if (subcategoryName[subcatName]){
+                        subcategoryName[subcatName].forEach(attributeObj => {
+                            if (attributeObj['attribute Category 01']){
+                                attributeObj['attribute Category 01'].forEach(attributes => {
+                                    if (attributes == desired){
+                                        parsedArray.push(product.name)
+                                    }
+                                })
+                            }
+                            if (attributeObj['attribute Category 02']){
+                                attributeObj['attribute Category 02'].forEach(attributes => {
+                                    if (attributes == desired){
+                                        parsedArray.push(product.name)
+                                    }
+                                })
+                            }
+                            if (attributeObj['attribute Category 03']){
+                                attributeObj['attribute Category 03'].forEach(attributes => {
+                                    if (attributes == desired){
+                                        parsedArray.push(product.name)
+                                    }
+                                })
+                            }
+                            if (attributeObj['attribute Category 04']){
+                                attributeObj['attribute Category 04'].forEach(attributes => {
+                                    if (attributes == desired){
+                                        parsedArray.push(product.name)
+                                    }
+                                })
+                            }
+                        });
+                    }
+                });
+            });
+            return parsedArray;
+        }
+    
+        },false)
+    }
 })
   function scrollTo(to){
         $('html, body').animate({

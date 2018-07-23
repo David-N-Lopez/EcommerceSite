@@ -214,7 +214,7 @@ layout: src/templates/layouts/1columnWBread.hbs
           <span aria-hidden="true" class="icon-star-outline"></span>
       </div>
       <div class="inline-group mt-1">
-      <add-to-cart-small name="{{this.name}}" price ="{{this.price.regular}}"image = "../../assets/images/{{this.img}}" @add = "newItem"></add-to-cart-small>
+      <add-to-cart-small class='{{this.sku}}' name="{{this.name}}" price ="{{this.price.regular}}" image = "../../assets/images/{{this.img}}" @add = "newItem"></add-to-cart-small>
       <span aria-hidden="true" class="icon-wishlist m-1 pt-1"></span>
       <span aria-hidden="true" class="icon-compare"></span>
       </div>
@@ -267,7 +267,7 @@ layout: src/templates/layouts/1columnWBread.hbs
           </div>
           <hr>
             <div class="scroll-view">
-            <mini-cart-item v-for='item in miniCartArray' :_name = "item.names" :_price = "item.prices" :_image = "item.images" :_qty = "item.qtys" :_obj ="item" ></mini-cart-item>
+            <mini-cart-item v-for='item in miniCartArray':_name = "item.names" :_price = "item.prices" :_image = "item.images" :_qty = "item.qtys" :_obj ="item" ></mini-cart-item>
             </div>
            <button class="mini-cart-button-orange white-color">proceed to checkout</button>
            <button class="mini-cart-button-grey mb-3 white-color">checkout with paypal</button>

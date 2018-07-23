@@ -4,7 +4,7 @@ window.Event = new Vue();
 Vue.component('add-to-cart', {
  
     props: ['name', 'price','image'],
-    template:`<button type="submit" class="btn add-to-cart-btn m-2 inline" @click = "callItem">Add to Cart</button>`,
+    template:`<button type="submit" class="btn add-to-cart-btn m-2 add-to-cart inline" @click = "callItem">Add to Cart</button>`,
     methods:{
         callItem() {
             let product = {names: this.name, prices:this.price, images: this.image, qtys: 1}
@@ -14,7 +14,7 @@ Vue.component('add-to-cart', {
 });
 Vue.component('add-to-cart-small', {
     props: ['name', 'price','image'],
-    template:`<button class="btn card-btn-pdp" @click = "callItemSmall">Add to Cart</button>`,
+    template:`<button class="btn card-btn-pdp add-to-cart" :title ="name" @click = "callItemSmall">Add to Cart</button>`,
     methods:{
         callItemSmall() {
             let product = {names: this.name, prices:this.price, images: this.image, qtys: 1}
@@ -80,6 +80,7 @@ var app = new Vue({
             } 
             this.miniCartVisible = true
            setTimeout(()=> {this.miniCartVisible = false}, 100000);
+           
         }
     },
     created:function(){
@@ -108,3 +109,37 @@ var app = new Vue({
     
 
 })
+var carts = new Vue({
+    el:'#bigCart',
+    data:{
+       cartItems: []
+    }
+})
+Vue.component('cart-item', {
+    props: ['name', 'qty','image','price'],
+    template:`
+     <div class="row ml-0 mr-0 bb-grey pt-3 pb-3 mb-4">
+    <div class="col-1">
+        <p>X</p>
+    </div>
+    <div class="col-2 mini-cart-img">
+        <img class="mini-cart-img" :src = "image">
+    </div>
+    <div class="col-3 regular-font helvetica bold">
+        {{name}}
+    </div>
+    <div class="col-2">
+        <p>
+           {{price}}.00
+        </p>
+    </div>
+    <div class="col-2">
+        <div class = "qty-input"> 
+            {{qty}}
+        </div>
+    </div>
+    <div class="col-2">
+        <p>$1000.00</p>
+    </div>
+    </div>`
+});
