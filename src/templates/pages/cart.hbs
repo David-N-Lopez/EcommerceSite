@@ -16,8 +16,10 @@ layout: src/templates/layouts/2column-right.hbs
         <div class="col-2">Qty:</div>
         <div class="col-2">Subtotal:</div>
     </div>
-    <cart-item v-for = "item in cartItems" :name = "item.name" :price ="item.price.regular" :image ="item.img" :qty = "item.qty">
+   
+    <cart-item v-for = "item in cartItems" :name = "item.name" :price ="item.price.regular" :image ="item.img" :qty = "item.qty" :sub="item.sub" :obj="item">
     </cart-item>
+    
     <div class="discount bb-grey">
     <p class="helvetica regular-font light pb-3">
         GIFT OPTIONS <span class="bold down-arrow ml-5">&or;</span>
@@ -44,29 +46,23 @@ layout: src/templates/layouts/2column-right.hbs
                  DISCOUNT CODE:
             </p>
              <form id= "discount-code">
-               <input type="text" name="discountCode" class="form-control code-num contact phone" id="exampleFormControlInput3" placeholder="Discount Code">
+               <input type="text" name="discountCode" class="form-control code-num contact phone" id="exampleFormControlInput5" placeholder="Discount Code">
                 <button type="submit" class="btn inline code-submit">ADD</button>
             </form>
+             <div class="error-message-2">
+            </div>
 
         </div>
         <div class="col-6 pl-0">
              <p class="helvetica regular-font light mb-1">
                  HAVE A GIFT CARD?
             </p>
-            <form id= "discount-code">
-                <input type="text" name="giftCode" class="form-control code-num contact phone" id="exampleFormControlInput3" placeholder="Gift Code">
+            <form id= "gift-code">
+                <input type="text" name="giftCode" class="form-control code-num contact phone" id="exampleFormControlInput6" placeholder="Gift Code">
                 <button type="submit" class="btn inline code-submit">ADD</button>
             </form>
-
+             <div class="error-message">
+            </div>
         </div>
     </div>
-    {{!-- <div class="row mr-0 ml-0">
-        <div class="col-6">
-
-        </div>
-        <div class="col-6">
-
-        </div>
-    </div> --}}
-
 </div>

@@ -91,7 +91,6 @@ var app = new Vue({
                 _self.miniCartArray[value.index].qtys-= 1;
                 _self.totalAmount -=1;
                 _self.miniCartSubtotal -= parseInt(value.prices)
-            //   alert(_self.miniCartArray[value.index].qtys)
             }
             if(_self.miniCartArray.length == 1 ){
                 _self.miniCartArray = []
@@ -113,14 +112,32 @@ var carts = new Vue({
     el:'#bigCart',
     data:{
        cartItems: []
-    }
+    },
+    created:function(){
+        var _self = this;
+        
+        Event.$on('deleteItem', function(value){
+            _self.cartItems.filter((x,i)=>{
+                if (x===value){
+                    if(x.qty>1){
+                        x.qty-=1;
+                    }
+                    else{
+                        _self.cartItems.splice(i,1);
+                    }
+              
+                }     
+        })
+    })
+}
 })
 Vue.component('cart-item', {
-    props: ['name', 'qty','image','price'],
+    props: ['name', 'qty','image','price','sub','obj'],
     template:`
+    <transition name="fade">
      <div class="row ml-0 mr-0 bb-grey pt-3 pb-3 mb-4">
     <div class="col-1">
-        <p>X</p>
+        <p @click= 'erase(obj)'>X</p>
     </div>
     <div class="col-2 mini-cart-img">
         <img class="mini-cart-img" :src = "image">
@@ -139,7 +156,13 @@ Vue.component('cart-item', {
         </div>
     </div>
     <div class="col-2">
-        <p>$1000.00</p>
+        <p>{{sub}}.00</p>
     </div>
-    </div>`
+    </div>
+    </transition>`,
+    methods:{
+        erase (value){
+            Event.$emit('deleteItem', value);
+         }
+     }
 });

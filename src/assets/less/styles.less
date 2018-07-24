@@ -161,7 +161,7 @@ body{
     font-size: 15px;
 }
 .contact{
-    line-height: 2.5;
+    line-height: 40px;
     border-right-width: 1px;
     border-radius: 0rem;
 }
@@ -178,7 +178,7 @@ body{
     font-size: 14px;
     width: 180px;
     height: 55px;
-    border-radius: 0px;
+    border-radius: 0;
     margin-bottom: 30px;
 
 }
@@ -332,7 +332,7 @@ body{
     background-color: @white;
     border-bottom-width: 2px;
     border-bottom-color: @white;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .nav-tabs{
     margin-bottom: -2px;
@@ -367,7 +367,7 @@ body{
     margin-left: 2.5em;
 }
 .menu-amount-options[x-placement^=bottom]{
-    right: 0px;
+    right: 0;
 }
 .selectdiv {
     position: relative;
@@ -415,7 +415,7 @@ body{
     display: block;
     width: 233px;
     float: right;
-    padding: 0px 24px;
+    padding: 0 24px;
     font-size: 13px;
     font-weight: bold;
     line-height: 52px;
@@ -499,9 +499,33 @@ body{
     font-size: 14px;
     width: 25%;
     height: 53px;
-    border-radius: 0px;
+    border-radius: 0;
    margin-top:-4px;
 }
 .js-gift-toggle{
     display: none;
+}
+//order summary
+.right-box{
+    margin-top:70px;
+    background-color: @white;
+    padding:15px;
+    .grey-border;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-checkout{
+    width:100%;
+    border: none;
+    height: 50px;
+    background-color: @brand-primary;
+    color:@white;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
 }

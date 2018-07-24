@@ -4,26 +4,47 @@ $(function(){
         "validAmount", 
         function(value, element) {
             var $selectorValue = $("js-valid-selector").val();
-            if(value>25 && $selectorValue == null){
+            if (value > 25 && $selectorValue === null) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
             
         }
     );
+    $.validator.addMethod(
+        "validDiscountCode",
+        function(value,element) {
+            if (value == "discount"){
+                document.cookie = 'discount=200'
+                return true
+            }
+
+            return false
+        }
+    )
+    $.validator.addMethod(
+        "validGiftCode",
+        function(value,element) {
+            if (value == "discount"){
+                document.cookie = 'discount=300'
+                return true
+            }
+
+            return false
+        }
+    )
     $("#contact-form").validate({
         rules: {
-            email:{
+            email: {
                 required: true,
                 email:true
             },
-            name:{
+            name: {
                 required:true,
                 lettersonly: true
             },
-            phone:{
+            phone: {
                 required:true,
                 phoneUS: true
             }
@@ -34,11 +55,11 @@ $(function(){
                 required: "please enter an email address!",
                 email: "Please enter a valid email address!"
             },
-            name:{
+            name: {
                 required: "please enter your name!",
                 lettersonly: "please do not enter numbers or symbols"
             },
-            phone:{
+            phone: {
                 required: "please enter your phone number!",
                 phoneUS: "please enter a US phone number"
 
@@ -48,17 +69,17 @@ $(function(){
     })
     $("#gift-card-form").validate({
         rules: {
-            name:{
+            name: {
                 required:true,
                 lettersonly: true
             },
-            amount:{
+            amount: {
                 validAmount: true,
                 digits:true,
                 range:[1,1000]
             }
         },
-        messages:{
+        messages: {
             amount: {
                 required: "please enter a valid amount!",
                 digits: "Please enter digits only!",
@@ -66,11 +87,50 @@ $(function(){
                 validAmount: "Please enter only one amount" 
 
             },
-            name:{
+            name: {
                 required: "please enter your name!",
                 lettersonly: "please do not enter numbers or symbols"
             }
 
         }
+    })
+    $("#gift-code").validate({
+        rules: {
+            giftCode: {
+                required:true,
+                validGiftCode:true
+            }
+
+        },
+        messages: {
+            giftCode: {
+                required: "please enter a code",
+                validGiftCode: "please enter a valid code"
+            }
+        },  
+        errorElement : 'div',
+        errorLabelContainer: '.error-message'
+
+
+    })
+    $("#discount-code").validate({
+        rules: {
+            discountCode: {
+                required: true,
+                validDiscountCode: true
+            }
+
+        },
+        messages: {
+            discountCode: {
+                required: "please enter a code",
+                validDiscountCode: "please enter a valid code"
+            }
+        },
+        errorElement: 'div',
+        errorLabelContainer: '.error-message-2',
+        success: function(label) {
+            
+        },
     })
 })

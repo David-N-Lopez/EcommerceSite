@@ -1,13 +1,15 @@
 //CARD CAROUSEL FOR PHONE SCREENS
+let $desktopCards = $(".cards-desktop");
+let $phoneCarousel = $(".carousel-phone");
 Respond.to([
     {
         'media': '(min-width: 768px)',
         'if': function () {
-            $(".cards-desktop").show();
+            $desktopCards.show();
         },
         'else': function(){
-            $(".cards-desktop").hide();
-            $(".carousel-phone").show();
+            $desktopCards.hide();
+            $phoneCarousel.show();
         }
     }
 ])
@@ -31,14 +33,28 @@ $(document).ready(function(){
     let $menuContent = $(".js-menu-content");
     let $headMenuButton = $(".head-menu");
     let $headAccountButton = $(".head-account");
+    let $productCard = $('.js-product-card');
+    let $addToCart = $(".add-to-cart");
+    let $slideFor = $('.slider-for');
+    let $slideNav = $('.slider-nav');
+    let $goUp = $(".js-go-up");
+    let $goToRev = $(".js-go-to-review");
+    let $submitBtn = $("submit-btn");
+    var $bodyTop = $('header');
+    var $fixedCart = $(".fixedCart");
+    let $arrow = $('.down-arrow');
+    let $giftMessage = $('.js-gift-toggle');
+    let $displayDiscount = $('.js-discount');
+    let $displaySubtotal = $('.js-subtotal');
+    let $displayTotal = $('.js-total');
 
     //scroll animation
-    $(".js-go-up").click(function() {
+    $goUp.click(function() {
         $('html, body').animate({
             scrollTop: 0
         }, 2000);
      });
-     $(".js-go-to-review").click(function(){
+     $goToRev.click(function(){
         scrollTo("#review-form");
      });
      //offcanvas animation
@@ -46,11 +62,11 @@ $(document).ready(function(){
         'use strict'
       
         $('[data-toggle="offcanvas"]').on('click', function () {
-          $('.offcanvas-collapse').toggleClass('open')
+          $offCanvas.toggleClass('open')
         })
         $offcanvas.on("mouseleave",function(){
-            if ( $('.offcanvas-collapse').hasClass('open')){
-                $('.offcanvas-collapse').toggleClass('open')
+            if ( $offCanvas.hasClass('open')){
+                $offCanvas.toggleClass('open')
             }
         }) 
       })
@@ -59,11 +75,11 @@ $(document).ready(function(){
     $(function() {
         $('.nav-link[href*="' + location.pathname.split("/")[1] + '"]').addClass('active-state');
       });
-    $("submit-btn").submit(function(e){
+    $submitBtn.submit(function(e){
         return false;
     });
     //slick slider
- $('.slider-for').slick({
+ $slideFor.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -71,7 +87,7 @@ $(document).ready(function(){
     asNavFor: '.slider-nav',
        autoplay: false
   });
-  $('.slider-nav').slick({
+  $slideNav.slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
@@ -89,28 +105,20 @@ $(document).ready(function(){
         window.print();
     })
     //sidNav for mobile devices
-    var $bodyTop = $('header');
-    var $fixedCart = $(".fixedCart");
     $(window).scroll(function(){
         if (window.scrollY > ($bodyTop.offset().top + $bodyTop.height())) {
             $fixedCart.show();
-        }
-        else{
+        }else{
             $fixedCart.hide();
-         
         }
     });
     //gift card message toggle
-    let $arrow = $('.down-arrow');
-    let $giftMessage = $('.js-gift-toggle');
     $arrow.on('click',function(){
         if ($giftMessage.is(':hidden')){
             $giftMessage.slideDown()
-        }
-        else{
+        }else{
             $giftMessage.slideUp()
         }
-      
     })
     //get cookie
     function getCookie(cname) {
@@ -148,15 +156,14 @@ $(document).ready(function(){
         return cookies;
       }
     //Cache data 
-    let $addToCart = $(".add-to-cart")
+    
     $addToCart.on('click', function(e){
         let productName = e.currentTarget.title
         if (getCookie(productName) != ''){
             let i = parseInt(getCookie(productName));
             i++;
             document.cookie = productName+'='+i.toString();
-        }
-        else{
+        }else{
             document.cookie = productName+'=1'
         }
         
@@ -180,7 +187,15 @@ $(document).ready(function(){
                 qtys = cookiesObj[itemName];
                 return obj.qty = qtys
             })
+            allCartProducts.map(obj=>{
+                return obj.sub = (obj.qty*obj.price.regular)
+            })
+            let subTotal = 0
+            allCartProducts.forEach(obj=>{
+                subTotal += parseInt(obj.sub)
+            })
             carts.cartItems = allCartProducts
+            document.cookie = 'subtotal='+subTotal;
         }
     )
     function getProductsWithName(obj,name){
@@ -194,6 +209,11 @@ $(document).ready(function(){
         })
         return objectArray;
     }
+    $displayDiscount.html(parseInt(getCookie('discount'))+'.00')
+    $displaySubtotal.html(parseInt(getCookie('subtotal'))+'.00')
+    let total = parseInt(getCookie('subtotal'))-parseInt(getCookie('discount'))
+    $displayTotal.html(total.toString()+'.00')
+
     //filter
     let attributeLink = document.getElementsByClassName("attribute-link");
     for (var i = 0; i < attributeLink.length; i++){
@@ -210,9 +230,9 @@ $(document).ready(function(){
                 productClassArray.push(name.slice(-2));
             })
             console.log(productClassArray)
-            $('.js-product-card').hide();
+            $productCard.hide();
             productClassArray.forEach(classValue => {
-                if($('.js-product-card').hasClass(classValue)){
+                if($productCard.hasClass(classValue)){
                     console.log("going to show"+ classValue);
                     $('.'+ classValue).show();
                 }
@@ -229,34 +249,17 @@ $(document).ready(function(){
                     // console.log(subcategoryName)
                     if (subcategoryName[subcatName]){
                         subcategoryName[subcatName].forEach(attributeObj => {
-                            if (attributeObj['attribute Category 01']){
-                                attributeObj['attribute Category 01'].forEach(attributes => {
-                                    if (attributes == desired){
-                                        parsedArray.push(product.name)
-                                    }
-                                })
+                            for (var i = 1; i < 5; i++){
+                                let attributeCategory = 'attribute Category 0'+i;
+                                if (attributeObj[attributeCategory]){
+                                    attributeObj[attributeCategory].forEach(attributes => {
+                                        if (attributes === desired) {
+                                            parsedArray.push(product.name);
+                                        }
+                                    })
+                                }
                             }
-                            if (attributeObj['attribute Category 02']){
-                                attributeObj['attribute Category 02'].forEach(attributes => {
-                                    if (attributes == desired){
-                                        parsedArray.push(product.name)
-                                    }
-                                })
-                            }
-                            if (attributeObj['attribute Category 03']){
-                                attributeObj['attribute Category 03'].forEach(attributes => {
-                                    if (attributes == desired){
-                                        parsedArray.push(product.name)
-                                    }
-                                })
-                            }
-                            if (attributeObj['attribute Category 04']){
-                                attributeObj['attribute Category 04'].forEach(attributes => {
-                                    if (attributes == desired){
-                                        parsedArray.push(product.name)
-                                    }
-                                })
-                            }
+
                         });
                     }
                 });
