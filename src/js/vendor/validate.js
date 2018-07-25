@@ -34,7 +34,7 @@ $(function(){
             return false
         }
     )
-    $("#contact-form").validate({
+    $(".contact-form").validate({
         rules: {
             email: {
                 required: true,
@@ -67,7 +67,7 @@ $(function(){
 
         }
     })
-    $("#gift-card-form").validate({
+    $(".gift-card-form").validate({
         rules: {
             name: {
                 required:true,
@@ -94,7 +94,7 @@ $(function(){
 
         }
     })
-    $("#gift-code").validate({
+    $(".gift-code").validate({
         rules: {
             giftCode: {
                 required:true,
@@ -113,7 +113,7 @@ $(function(){
 
 
     })
-    $("#discount-code").validate({
+    $(".discount-code").validate({
         rules: {
             discountCode: {
                 required: true,

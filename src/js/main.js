@@ -47,6 +47,7 @@ $(document).ready(function(){
     let $displayDiscount = $('.js-discount');
     let $displaySubtotal = $('.js-subtotal');
     let $displayTotal = $('.js-total');
+    let $deleteItems = $('.delete-items');
 
     //scroll animation
     $goUp.click(function() {
@@ -105,16 +106,16 @@ $(document).ready(function(){
         window.print();
     })
     //sidNav for mobile devices
-    $(window).scroll(function(){
-        if (window.scrollY > ($bodyTop.offset().top + $bodyTop.height())) {
+    $(window).scroll(function() {
+        if (window.scrollY > ($bodyTop.offset().top + $bodyTop.height()+ 100)) {
             $fixedCart.show();
         }else{
             $fixedCart.hide();
         }
     });
     //gift card message toggle
-    $arrow.on('click',function(){
-        if ($giftMessage.is(':hidden')){
+    $arrow.on('click',function() {
+        if ($giftMessage.is(':hidden')) {
             $giftMessage.slideDown()
         }else{
             $giftMessage.slideUp()
@@ -136,17 +137,17 @@ $(document).ready(function(){
         }
         return "";
     }
-    var getCookiesKeys = function(){
+    var getCookiesKeys = function() {
         var pairs = document.cookie.split(";");
         var cookies = [];
-        for (var i=0; i<pairs.length; i++){
+        for (var i=0; i<pairs.length; i++) {
           var pair = pairs[i].split("=");
           cookies.push(pair[0])
         //   cookies[(pair[0]+'').trim()] = unescape(pair[1]);
         }
         return cookies;
       }
-      var getCookiesObj = function(){
+      var getCookiesObj = function() {
         var pairs = document.cookie.split(";");
         var cookies = [];
         for (var i=0; i<pairs.length; i++){
@@ -157,7 +158,7 @@ $(document).ready(function(){
       }
     //Cache data 
     
-    $addToCart.on('click', function(e){
+    $addToCart.on('click', function(e) {
         let productName = e.currentTarget.title
         if (getCookie(productName) != ''){
             let i = parseInt(getCookie(productName));
@@ -198,6 +199,7 @@ $(document).ready(function(){
             document.cookie = 'subtotal='+subTotal;
         }
     )
+
     function getProductsWithName(obj,name){
         let objectArray = [];
         obj.forEach(product=>{
@@ -211,6 +213,11 @@ $(document).ready(function(){
     }
     $displayDiscount.html(parseInt(getCookie('discount'))+'.00')
     $displaySubtotal.html(parseInt(getCookie('subtotal'))+'.00')
+   
+
+    // console.log($subtotal.html());
+    // $displaySubtotal.html($subtotal.html());
+    // $subtotal.html();
     let total = parseInt(getCookie('subtotal'))-parseInt(getCookie('discount'))
     $displayTotal.html(total.toString()+'.00')
 

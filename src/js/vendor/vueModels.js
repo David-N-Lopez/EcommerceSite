@@ -37,7 +37,7 @@ Vue.component('mini-cart-item',{
         <p class="inline white-color">{{_qty}}</p>
         </div>
     </div>
-    <div class="col-3 ta-right ml-0"><a class="inline white-color mini-cart-exit bold" @click = 'remove(_obj)' >X</a></div>
+    <div class="col-3 text-right ml-0"><a class="inline white-color mini-cart-exit bold" @click = 'remove(_obj)' >X</a></div>
      </div>`,
      methods:{
         remove (value){
@@ -124,11 +124,16 @@ var carts = new Vue({
                     }
                     else{
                         _self.cartItems.splice(i,1);
+                        function deleteCookie(c_name) {
+                            document.cookie = c_name+'=' + ";expires=Thu, 01 Jan 1970 00:00:01 GMT ;domain=.yourdomain.com;path=/";
+                            document.cookie = c_name+'=' + ";expires=Thu, 01 Jan 1970 00:00:01 GMT ;";
+                        }
+                        deleteCookie(_self.cartItems[i].name)
                     }
               
                 }     
+            })
         })
-    })
 }
 })
 Vue.component('cart-item', {
@@ -137,7 +142,7 @@ Vue.component('cart-item', {
     <transition name="fade">
      <div class="row ml-0 mr-0 bb-grey pt-3 pb-3 mb-4">
     <div class="col-1">
-        <p @click= 'erase(obj)'>X</p>
+        <p @click= 'erase(obj)' class ="delete-items" >X</p>
     </div>
     <div class="col-2 mini-cart-img">
         <img class="mini-cart-img" :src = "image">
@@ -152,7 +157,7 @@ Vue.component('cart-item', {
     </div>
     <div class="col-2">
         <div class = "qty-input"> 
-            {{qty}}
+            <input :placeholder = "qty" class = "qty-input-box">
         </div>
     </div>
     <div class="col-2">
@@ -162,7 +167,29 @@ Vue.component('cart-item', {
     </transition>`,
     methods:{
         erase (value){
+            let price = value.price.regular;
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            let newSub = getCookie('subtotal');
+           newSub -= price;
+        document.cookie = 'subtotal='+newSub;
+        $('.js-subtotal').html(newSub+'.00');
             Event.$emit('deleteItem', value);
          }
+  
      }
+
 });

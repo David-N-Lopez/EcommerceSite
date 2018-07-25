@@ -6,17 +6,19 @@
 @import "header.less";
 @import "carousel.less";
 @import "print.less";
+@import "icon.less";
 //BODY
-body{
+body {
     background-color: @brand-secondary;
-}
+} 
+
 
 //HERO 
-.carousel-inner{
+.carousel-inner {
     max-height: 700px;
-}
+} 
 
-.carousel-captions{
+.carousel-captions {
     top: 10%;
     position: absolute;
     right: 15%;
@@ -24,118 +26,152 @@ body{
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
-    .ta-center;
-}
-.carousel-indicators li{
+    .text-center;
+} 
+
+.carousel-indicators li {
     border-radius: 50%;
     height: 10px;
     width: 10px;
-}
-.carousel-img{
+} 
+
+.carousel-img {
     max-width: 38px;
-}
-.carousel-indicators .active{
+} 
+
+.carousel-indicators .active {
     .brand-background;
-}
-.carousel{
+} 
+
+.carousel {
     margin-bottom: 50px;
-}
-.grid-img{
+} 
+
+.grid-img {
     width: 100%;
     height: 250px;
-}
+} 
 
-.overlay-gray{
+.overlay-gray {
     display: block;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 20px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background: rgba(35,31,32,0.3);
+} 
+
+.overlay-gray-small {
+    .overlay-gray;
     left: 15px;
     right: 15px;
-    background: rgba(35,31,32,0.4);
+} 
+.overlay-gray-block {
+    .overlay-gray-small;
+    top: 0;
+    bottom: 0;
 }
 
-.grid-info{
+.grid-info {
     position: relative;
     transition: all .3s ease-in-out;
-}
-.grid-info:hover{
+} 
+
+.grid-info:hover {
     transform: scale(1.1);
-}
-.grid-info-soft{
+} 
+ 
+.grid-info-soft {
     position: relative;
     transition: all .3s ease-in-out;
-}
-.grid-info-soft:hover{
+} 
+
+.grid-info-soft:hover {
     transform: scale(1.05);
-}
-.overlay-center{
+} 
+ 
+.overlay-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: @white;
     font-size: 35px;
-}
-.overlay-center-12{
+} 
+
+.overlay-center-12 {
     position: absolute;
     top: 0;
     left: 500px;
     transform: translate(-50%, -50%);
     color: @white;
     font-size: 35px;
-}
-.overlay-center-6{
+} 
+
+.overlay-center-6 {
     position: absolute;
     bottom: 50;
     left: 200px;
     color: @white;
     font-size: 35px;
-}
-.line{  //better name
+} 
+
+.line {  //better name
     max-width: 70px;
-}
-.display-5{ //better naming convention
-    font-weight: bold;
+} 
+
+.display-5 { //better naming convention
+    font-weight: @bold;
     font-size: 30px;
-}
+} 
+
 //CARDS
 
-.card-btn:hover{
+.card-btn:hover {
     transform: scale(1.1);
-}
-.card-columns {
+} 
+
+.card-columns  {
       column-count: 5;
-}
-.card-columns-clp{
+} 
+
+.card-columns-clp {
     column-count: 3;
-    .card{
+    .card {
         border: none;
         background-color: #F4F4F4;
-    }
-}
-.card-columns-phone{
+    } 
+
+} 
+
+.card-columns-phone {
     column-count: 2;
-}
-.card-img-top{
+} 
+
+.card-img-top {
     width: 100%;
     height: 200px;    
-}
-.card-btn{
+} 
+
+.card-btn {
     color: @white;
     background-color: @brand-primary;
     transition: all .2s ease-in-out;
-}
-.card-img-side{
+} 
+
+.card-img-side {
     border-radius: 0%;
     border-color: lightgray;
     border-width: 1px;
-}
+} 
 
-.icon-compare{
+
+.icon-compare {
     font-size: 22px;
-}
-.overlay-gray-hero{
+} 
+
+.overlay-gray-hero {
     display: block;
     position: absolute;
     top: 0;
@@ -143,35 +179,42 @@ body{
     left: 15px;
     right: 15px;
     background: rgba(35,31,32,0.4);
-}
-.contact-title{
+} 
+
+.contact-title {
     margin-top: 75px;
-}
-.cards-desktop{
+} 
+
+.cards-desktop {
     display: none;
-}
-.carousel-phone{
+} 
+
+.carousel-phone {
     display: none;
-}
+} 
+
 // CONTACT PAGE
 
-.contact-text{
+.contact-text {
     font-family: @brand-font;
     font-weight: lighter;
     font-size: 15px;
-}
-.contact{
+} 
+
+.contact {
     line-height: 40px;
     border-right-width: 1px;
     border-radius: 0rem;
-}
-.contact::placeholder{
+} 
+
+.contact::placeholder {
     font-weight: 400;
     font-family: @brand-font;
     font-size: 14px;
     color: @black;
-}
-.submit-btn{
+} 
+
+.submit-btn {
     background-color: @brand-primary;
     color: @white;
     font-weight: 100px;
@@ -181,19 +224,22 @@ body{
     border-radius: 0;
     margin-bottom: 30px;
 
-}
+} 
+
 //CLP
 
-.subcategories-li{
+.subcategories-li {
     font-weight: lighter;
     font-family: @brand-font;
-}
+} 
+
 //PLP
 
-.plp-img{
+.plp-img {
     height: 230px;
-}
-.ribbon-sale{
+} 
+
+.ribbon-sale {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -204,8 +250,9 @@ body{
     padding: 12px 5px 12px 5px;
     color: @brand-primary;
     font-size: 15px;
-}
-.ribbon-new{
+} 
+
+.ribbon-new {
     position: absolute;
     border: 2px solid @black;
     border-radius: 50%;
@@ -215,60 +262,73 @@ body{
     color: @black;
     font-size: 15px;
    
-}
-.circle{
+} 
+
+.circle {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    .inline-b;
-}
+    display: inline-block;
+
+} 
+
 //BC
-.nav-home,.nav-category{
+.nav-home,.nav-category {
     .grey-color;
-}
-.breadcrumb{
+} 
+
+.breadcrumb {
     background-color: inherit;
-}
-.breadcrumb-item{
+} 
+
+.breadcrumb-item {
     font-size: 12px;
-}
-.breadcrumb-item.active{
+} 
+
+.breadcrumb-item.active {
     color: lightgray;
-}
-.filter-dd{
+} 
+
+.filter-dd {
     border-width: 1px;
     border-radius: 5%;
     border-color: @black;
     color: @black;
-}
+} 
+
 //Product Description
-.price-tag-plp{
+.price-tag-plp {
     font-weight: 200;
     font-size: 20px;
     color: @black
-}
-.special-price-tag-plp{
+} 
+
+.special-price-tag-plp {
     .price-tag-plp;
     color: red;
-}
-.qty-input{
+} 
+
+.qty-input {
     height: 55px;
     width: 55px;
     border-width: 1px;
     border-color: @black;
     margin-right: 17px;
 
-}
-.qty-input::placeholder{
+} 
+
+.qty-input::placeholder {
     color: @black;
     padding-left: 10px;
 
-}
-.add-to-cart-btn{
+} 
+
+.add-to-cart-btn {
     .submit-btn;
     width: 270px;
-}
-.checkout-btn{
+} 
+
+.checkout-btn {
     margin-top: 10px;    
     font-size: 10px;
     height: 40px;
@@ -276,10 +336,11 @@ body{
     color: @black;
     border-width: 1px;
     border-color: @black;
-}
+} 
+
 
 //PDP
-.info-btn-bar {
+.info-btn-bar  {
     background-color: lightgray;
     .black-color;
     border-width: 1px;
@@ -290,9 +351,9 @@ body{
     font-size: 13px;
     font-family: @brand-font;
     margin-bottom: -1px;
-  
-}
-.more-info-style{
+} 
+
+.more-info-style {
     position: relative;
     .white-background;
     .black-color;
@@ -302,59 +363,70 @@ body{
     border-style: solid;
     z-index: -1;
     padding: 30px;
-}
-.btn-more-info{
+} 
+
+.btn-more-info {
     margin-left: -5px;
     margin-right: -5px;
-}
-.tab-content-pdp{
+} 
+
+.tab-content-pdp {
     border-style:solid;
     border-width:1px;
     border-color:@black;
     background: @white;
-}
-.info-section{
+} 
+
+.info-section {
     margin-top: 130px;
     margin-bottom: 110px;
-}
+} 
 
-.pdp-tab{
+
+.pdp-tab {
     padding:.5rem 1rem;
     background-color: lightgray;
     display: block;
     color:@black;
     border:1px solid @black;
-}
-.pdp-tab:hover{
+} 
+
+.pdp-tab:hover {
     color:inherit;
-}
-.pdp-li > .active{
+} 
+
+.pdp-li > .active {
     background-color: @white;
     border-bottom-width: 2px;
     border-bottom-color: @white;
     margin-bottom: 0;
-}
-.nav-tabs{
+} 
+
+.nav-tabs {
     margin-bottom: -2px;
     position: relative;
     z-index: 2;
-}
-.card-btn-pdp{
+} 
+
+.card-btn-pdp {
     .card-btn;
     width: 100;
     font-size: 13px;
     border-radius: 4%;
-}
+} 
+
 //PDP gift-card
-.gorilla-card-img{
+.gorilla-card-img {
     height: 300px;
     width: max-content;
-}
-.input-field{
+} 
+
+.input-field {
     line-height: 2.5;
     border-radius: 0;
-}
-.input-field::before{
+} 
+
+.input-field::before {
     position: absolute;
     right: 62px;
     top: 0;
@@ -362,22 +434,26 @@ body{
     content: "";
     .bl-black;
   
-}
-.dropdown-toggle::after{
+} 
+
+.dropdown-toggle::after {
     margin-left: 2.5em;
-}
-.menu-amount-options[x-placement^=bottom]{
+} 
+
+.menu-amount-options[x-placement^=bottom] {
     right: 0;
-}
-.selectdiv {
+} 
+
+.selectdiv  {
     position: relative;
     /*Don't really need this just for demo styling*/
-    .block;
+    display: block;
     float: left;
     widows: 100%;
-  }
+  } 
+
   
-  .selectdiv:after {
+  .selectdiv:after  {
     position: absolute;
     width: 0;
     height: 0;
@@ -392,21 +468,24 @@ body{
     color: @black;
     
 
-  }
-  .selectdiv:before{
+  } 
+
+  .selectdiv:before {
       content: "";
       position: absolute;
       right: 36px;
       border-left: 1px solid @black;
       height:53px;
 
-  }
+  } 
+
   /* IE11 hide native button (thanks Matt!) */
-  select::-ms-expand {
+  select::-ms-expand  {
   display: none;
-  }
+  } 
+
   
-  .selectdiv select {
+  .selectdiv select  {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -417,7 +496,7 @@ body{
     float: right;
     padding: 0 24px;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: @bold;
     line-height: 52px;
     color: @black;
     background-color: #ffffff;
@@ -426,30 +505,36 @@ body{
     border: 1px solid @black;
     -ms-word-break: normal;
     word-break: normal;
-  }
+  } 
+
 
 //compare page
-.card-img-compare{
+.card-img-compare {
     max-width: 200px;
     height: 150px;
-}
-.compare-img{
+} 
+
+.compare-img {
     width: 100%;
     height: 100%;
-}
-.compare-card{
+} 
+
+.compare-card {
     border: none;
     background-color: inherit;
-}
-.print-screen{
+} 
+
+.print-screen {
     float: right;
-}
-.compare-banner{
+} 
+
+.compare-banner {
     margin-top: 60px;
     margin-bottom: 60px;
-}
-.fixedCart{
-   
+} 
+
+.fixedCart {
+   display:none;
     position: sticky;
     left: 1600px;
     top: 40%;
@@ -457,14 +542,16 @@ body{
     width: 100px;
     height:100px;
     margin-right: -111px;
-}
+} 
+
 //Cart
-.cart-image{
+.cart-image {
     width: 100%;
     height: 100%;
     padding: 10px;
-}
-.orangeCircle{
+} 
+
+.orangeCircle {
     border-radius: 50%;
     background-color:@brand-primary;
     color: white;
@@ -474,25 +561,29 @@ body{
     width: 35px;
     height: 35px;
     font-size: 11px;
-}
-.cartNumber{
+} 
+
+.cartNumber {
     position: absolute;
     right: 13px;
     top: 6px;
     font-size: 14px;
     .bold;
-}
-.mini-cart-scroll{
+} 
+
+.mini-cart-scroll {
     height: 280px;
     overflow-y:auto;
     margin-bottom: 10px;
-}
+} 
+
 //Real cart
-.code-num{
+.code-num {
     width:60%;
     display: inline;
-}
-.code-submit{
+} 
+
+.code-submit {
     background-color: @brand-primary;
     color: @white;
     font-weight: 100px;
@@ -501,31 +592,50 @@ body{
     height: 53px;
     border-radius: 0;
    margin-top:-4px;
-}
-.js-gift-toggle{
+} 
+
+.js-gift-toggle {
     display: none;
-}
+} 
+
+
 //order summary
-.right-box{
+.right-box {
     margin-top:70px;
     background-color: @white;
     padding:15px;
     .grey-border;
-}
-.box{
+} 
+
+
+.box {
     display: flex;
     justify-content: space-between;
-}
-.btn-checkout{
+} 
+ 
+
+
+.btn-checkout {
     width:100%;
     border: none;
     height: 50px;
     background-color: @brand-primary;
     color:@white;
-}
-.fade-enter-active, .fade-leave-active {
+} 
+
+.fade-enter-active, .fade-leave-active  {
     transition: opacity .5s;
-  }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  } 
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */  {
     opacity: 0;
+} 
+
+.qty-input-box {
+    width: 33px;
+    .grey-border;
+}
+
+.qty-input-box::placeholder {
+    .text-center;
 }

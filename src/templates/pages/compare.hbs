@@ -3,8 +3,8 @@ title: compare
 layout: src/templates/layouts/1column.hbs
 ---
 <div class="container compare-banner">
-<h3 class="helvetica semi-important-font container mt-5 mb-5 inline">Compare Products</h3>
-<p class="inline regular-font bold grey-color print-screen js-print">Print</p>
+<h3 class="helvetica semi-important-font container mt-5 mb-5 d-inline">Compare Products</h3>
+<p class="d-inline regular-font bold grey-color print-screen js-print">Print</p>
 </div>
 <table class="container mb-5 mt-5">
    
@@ -21,7 +21,7 @@ layout: src/templates/layouts/1column.hbs
             </a>
             
        <h5 class="card-title mb-2">{{this.name}}</h5>
-      <div class="inline-group mb-0">
+      <div class="d-inline-block mb-0">
           <span aria-hidden="true" class="icon-star"></span>
           <span aria-hidden="true" class="icon-star"></span>
           <span aria-hidden="true" class="icon-star"></span>
@@ -29,11 +29,11 @@ layout: src/templates/layouts/1column.hbs
           <span aria-hidden="true" class="icon-star-outline"></span>
         </div>
                {{#if this.price.special}}
-        <p class="special-price-tag-plp inline">${{this.price.special}}.00</p>
+        <p class="special-price-tag-plp d-inline">${{this.price.special}}.00</p>
         {{else}}
-             <p class="price-tag-plp inline">${{this.price.regular}}.00</p>
+             <p class="price-tag-plp d-inline">${{this.price.regular}}.00</p>
         {{/if}}
-        <div class="inline-group mb-4 no-print">
+        <div class="d-inline-block mb-4 no-print">
       <button class="btn card-btn ml-1 mr-2">Add to Cart</button>
       <span aria-hidden="true" class="icon-wishlist-outline pt-1"></span>
       <span aria-hidden="true" class="icon-remove"></span>
