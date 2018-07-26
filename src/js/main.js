@@ -28,7 +28,7 @@ $(document).ready(function(){
     let $myFooter = $("footer");
     let $navToggle = $(".navbar-toggler");
     let $notFlyout = $("body").not(".offcanvas-collapse");
-    let $offcanvas = $(".offcanvas-collapse");
+    let $offCanvas = $(".offcanvas-collapse");
     let $accountContent = $(".js-account-content");
     let $menuContent = $(".js-menu-content");
     let $headMenuButton = $(".head-menu");
@@ -48,6 +48,7 @@ $(document).ready(function(){
     let $displaySubtotal = $('.js-subtotal');
     let $displayTotal = $('.js-total');
     let $deleteItems = $('.delete-items');
+    let $dropdownMenu = $('.browse');
 
     //scroll animation
     $goUp.click(function() {
@@ -65,11 +66,17 @@ $(document).ready(function(){
         $('[data-toggle="offcanvas"]').on('click', function () {
           $offCanvas.toggleClass('open')
         })
-        $offcanvas.on("mouseleave",function(){
+        $offCanvas.on("mouseleave",function(){
             if ( $offCanvas.hasClass('open')){
                 $offCanvas.toggleClass('open')
             }
         }) 
+      })
+    
+      $dropdownMenu.on('click',function(){
+            $('.dropdown-menus').toggle('slow');
+            $(".navbar").css("margin-bottom", "0");
+
       })
       
      //nav active state

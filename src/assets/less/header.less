@@ -6,14 +6,14 @@
     background-color: @black;
     position: relative;
     font-family: @brand-font;
-    font-weight: 200;
+    font-weight: @light;
     font-size: 13px
 }
 
 .dropdown-menu-masthead {
     background-color: @black;
     font-family: @brand-font;
-    font-weight: 200;
+    font-weight: @light;
     font-size: 13px;
     border: none;
 }
@@ -21,42 +21,24 @@
 .dropdown-menu {
     border-right-width: 0px;
 
+
+}
+.dropdown-menus {
+    background-color: @white;
+    display: none;
 }
 
 @media(min-width: @tablet-max) {
-.active-state:after {
-    content: "-";
-    position: absolute;
-    color: @brand-primary;
-    top: 15px;
-    left: 45%;
-    font-size: 50px;
-}
-
-.nav-link:hover {
-    &:after {
-     content: "-";
-     position: absolute;
-     color: @brand-primary;
-     top: 15px;
-     left: 45%;
-     font-size: 50px;
-    }
- }}
-
-.browse::after {
-    @media(max-width: @tablet-max) {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 80px;
-    vertical-align: 4px;
-    content: "";
-    border-top: 5px solid;
-    border-right: 5px solid transparent;
-    border-bottom: 0;
-    border-left: 5px solid transparent;
-}
+    .active-state:after,
+    .nav-link:hover:after
+        {
+            content: "-";
+            position: absolute;
+            color: @brand-primary;
+            top: 15px;
+            left: 45%;
+            font-size: 50px;
+        }
 }
 
 .navbar {
@@ -122,26 +104,9 @@
     }
 }
 
-.phone-display-search {
-    @media (max-width: @tablet-max) {
-        .form-control {
-            display: none;
-        }
-        .inputGroup-sizing-default {
-            border-width: 0px;
-        }
-    }
-}
-
-.phone-display-left  {
-    @media (max-width: @tablet-max) {//how can I store this as functions maybe
-        justify-content: flex-start!important;
-    }  
-}
-
 .phone-display-right {
     @media (max-width: @phone-max) {//how can I store this as functions maybe
-        justify-content: flex-end!important;
+        justify-content: flex-end !important;
     }  
 }
 
@@ -190,11 +155,39 @@
       z-index: 3000;
     }
 
+    .browse::after {
+   
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 80px;
+        vertical-align: 4px;
+        content: "";
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-bottom: 0;
+        border-left: 5px solid transparent;
+    
+    }
+
     .offcanvas-collapse.open  {
       right: 40%;
       visibility: visible;
     }
-  }
+
+    .phone-display-left  {
+        justify-content: flex-start!important;  
+   }
+
+   .phone-display-search {
+    .form-control {
+        display: none;
+    }
+    .inputGroup-sizing-default {
+        border-width: 0px;
+    }
+}
+}
 
   .mini-cart {
       margin: 10% 0 0 53%;
@@ -214,7 +207,7 @@
     border-right: 10px solid transparent;
     color: @black-transparent;
   }
-  
+
   .mini-cart-img {
       width: 80px;
       height: 80px;
