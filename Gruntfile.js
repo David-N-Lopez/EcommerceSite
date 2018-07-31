@@ -12,8 +12,7 @@
 // '<%= config.src %>/templates/pages/**/*.hbs'
 
 module.exports = function (grunt) {
-
-    /*
+	    /*
      * Defining the default config values
       * */
     var config = {
@@ -23,12 +22,13 @@ module.exports = function (grunt) {
             port: '8094',
             livereloadport: '1337'
     },
-    lessExamplesFiles = {};
+	lessExamplesFiles = {};
 
 	require('time-grunt')(grunt);
 	require('load-grunt-tasks')(grunt);
 
 	grunt.loadNpmTasks('assemble');
+
 
 	// Project configuration.
 	grunt.initConfig({
@@ -84,7 +84,6 @@ module.exports = function (grunt) {
                 ]
             }
 		},
-
 		// @todo see below to build out project js > bundle.js
 		concat: {
 			options: {
@@ -105,7 +104,9 @@ module.exports = function (grunt) {
 			},
 			build: [
 				'watch:less',
+				'watch:sass',
 				'watch:fonts',
+				'watch:css',
 				'watch:js',
 				'watch:images',
 				'watch:assemble',
@@ -210,6 +211,24 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		sass: {
+			build: {
+				options: {
+					paths: [
+						'<%= config.src %>/assets/css/sass/*.scss'
+					],
+					compress: true,
+					sourceMap: false,
+				},
+				dist: {
+					files: {
+						'<%= config.build %>/assets/css/styles.css': '<%= config.src %>/assets/css/sass/styles.scss'
+					}
+				}
+				
+			}
+		},
+
 
         postcss: {
             options: {
@@ -247,13 +266,16 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-
 		// Config to handle all watching for development
 		watch: {
             css : {
                 files: ['<%= config.src %>/assets/css/**/*.css'],
-                tasks: ['newer:copy:css']
-            },
+                tasks: ['copy:css']
+			},
+			sass : {
+				files: ['<%= config.src %>/assets/css/sass/*.scss'],
+				tasks: ['sass', 'postcss']
+			},
             less : {
 				files: ['<%= config.src %>/assets/less/**/*.less'],
 				tasks: ['less', 'postcss']
@@ -307,8 +329,6 @@ module.exports = function (grunt) {
 			}
 		}
 	});
-
-
 	/**
 	 * Code test tasks
 	 * Build our assets after jshinting for testing
@@ -317,8 +337,6 @@ module.exports = function (grunt) {
 		'jshint',
 		'assets'
 	]);
-
-
 	// Default task
 	grunt.registerTask('default', [
 		// cleanup
@@ -327,7 +345,11 @@ module.exports = function (grunt) {
 
 		// compile less > css
 		'less:build',
-        'postcss',
+		'postcss',
+	
+		// compile sass > css
+		'sass:build',
+		'postcss',
 
 		// build js
 		'concat:build',
@@ -342,11 +364,9 @@ module.exports = function (grunt) {
 		'assemble'
 	]);
 
-
 	grunt.registerTask('build', [
 		'default'
 	]);
-
 
 	/**
 	 * Server specific workflow and watchers
@@ -362,7 +382,6 @@ module.exports = function (grunt) {
 		'watch:build'
 	]);
 
-
 	/**
 	 * Deployments should be run to prep for QA deployment
 	 */
@@ -374,6 +393,11 @@ module.exports = function (grunt) {
         'less:build',
         'less:examples',
         'postcss',
+
+		// compile sass > css
+		'sass:build',
+		'sass:examples',
+		'postcss',
 
         // build js
         'concat:build',
@@ -389,4 +413,5 @@ module.exports = function (grunt) {
 
         'copy:deploy'
 	]);
+	grunt.loadNpmTasks('grunt-contrib-sass');
 };

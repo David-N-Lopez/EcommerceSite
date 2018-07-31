@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://dlopez@stash.gorillagroup.com/scm/ft/offline-interview-exercise.git
+	fetch = +refs/*:refs/*
+	mirror = true

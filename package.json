@@ -1,16 +1,15 @@
 {
-  "name": "gorilla-fed-uikit",
-  "description": "Gorilla Group FED UIKit.",
+  "name": "fed-uikit",
+  "description": "FED UIKit.",
   "homepage": "http://fed.gemshelp.com",
   "version": "1.0.0",
   "author": {
-    "name": "Gorilla Group",
-    "email": "fed@gorillagroup.com",
-    "url": "http://www.gorillagroup.com"
+    "name": "David 'Nico' Lopez",
+    "email": "dlopez1@iwu.edu"
   },
   "repository": {
     "type": "git",
-    "url": "https://stash.gorillagroup.com/projects/FT/repos/gorilla-fed-uikit/"
+    "url": "https://github.com/Nicorules/eCommerceDemoWebsite.git"
   },
   "engines": {
     "node": ">=0.10"
@@ -31,6 +30,7 @@
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-jshint": "~0.6.5",
     "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-newer": "~0.7.0",
